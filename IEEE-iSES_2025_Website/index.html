@@ -209,6 +209,8 @@
 				<p>15-17 December 2025, Jaipur, India</p>
 			</div>
 
+			
+
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
@@ -371,7 +373,31 @@
 		</div>
 	</div>
 
-
+	<section id="event-photos" class="wrapper style1" style="background-color: white; padding: 20px;">
+			<div class="container">
+				<h2 style="text-align: center; color: black; font-size: x-large; font-weight: bold;">Venue Photos</h2>
+				<br>
+		
+				<!-- Dual Slideshow Container -->
+				<div id="dual-slideshow-container" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+					<!-- First Slideshow Container -->
+					<div id="slideshow-container-1" style="position: relative; width: 100%; max-width: 600px; height: 400px; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+						<!-- Images for the first slideshow will be inserted here by JavaScript -->
+					</div>
+					<!-- Second Slideshow Container -->
+					<div id="slideshow-container-2" style="position: relative; width: 100%; max-width: 600px; height: 400px; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+						<!-- Images for the second slideshow will be inserted here by JavaScript -->
+					</div>
+				</div>
+		
+				<!-- Link to More Photos -->
+				<!-- <div style="text-align: center; margin-top: 20px;">
+					<a href="https://drive.google.com/drive/folders/15IVJzn967Sa9F5tOd_jQHwx7EH5Kn9bS" target="_blank" class="button-link">
+						View More Photos
+					</a>
+				</div> -->
+			</div>
+		</section>
 
 
 	<div class="scrollable-boxes-container">
@@ -399,7 +425,7 @@
 		<section class="info-box">
 			<h2>Important Information</h2>
 			<div class="scrollable-content">
-				<ul>
+				<ul><li style="color: black;">Selected papers from the conference will be invited to extend and publish in a Special Edition of SN Computer Science.</li>
 					<li style="color: black;">Authors can now submit their manuscripts via the active <a target="_blank" href="https://cmt3.research.microsoft.com/IEEEiSeS2025">Microsoft CMT submission link</a>.</li>
 					<li style="color: black;">Authors can find manuscript formatting guidelines on the <a href="manuscript-information.html">manuscript information page</a>.</li>
 				</ul>
@@ -492,7 +518,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		const folderPath = "images/event_photos/";
+		const folderPath = "images/HomeImages/";
 		const slideshowContainer1 = document.getElementById("slideshow-container-1");
 		const slideshowContainer2 = document.getElementById("slideshow-container-2");
 		let imageFiles = [];
