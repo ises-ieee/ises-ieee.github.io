@@ -1,6 +1,6 @@
 <?php
 // Specify the folder containing the images
-$folderPath = "images/event_photos/";
+$folderPath = "images/HomeImages/";
 
 // Get all image files from the folder
 $imageFiles = glob($folderPath . "*.{jpg,png,gif,JPG}", GLOB_BRACE);
