@@ -75,6 +75,7 @@ function startBackgroundCarousel() {
         'url("images/AI-Banner-home.jpg")',
         'url("images/ieee-ises-2021-slider-05.jpg")',
         'url("images/IEEE-iSES-2024_Banner_Chip.png")',
+		'url("images/MNIT_Jaipur.jpg")',
     ];
 
     // Reference to the header element
