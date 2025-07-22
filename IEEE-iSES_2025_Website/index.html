@@ -193,13 +193,40 @@
 				background-color: #fffae6;
 			}
 		}
+
+		/* Scrolling red blinking announcement */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.scrolling-announcement {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background: #ffffff;
+  padding: 10px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  }
+
+.scrolling-announcement a {
+  display: inline-block;
+  animation: scroll-left 25s linear infinite;
+}
+
 	</style>
 
 </head>
 
 <body class="homepage is-preload">
 	<div id="page-wrapper">
-
+		
 		<!-- Header -->
 		<section id="header" class="wrapper">
 
@@ -213,6 +240,7 @@
 
 			<!-- Nav -->
 			<nav id="nav">
+				
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li>
@@ -315,6 +343,8 @@
 						</ul>
 					</li>
 				</ul>
+
+				
 			</nav>
 		</section>
 		<div class="main-container">
@@ -325,10 +355,13 @@
 
 					<!-- <div class="title">Focus</div> -->
 					<div class="container">
+						
+						
 						<!-- Image -->
 						<a href="#" class="image featured">
 							<img src="images/IEEE-iSES-2025_Banner.jpg" alt="" />
 						</a>
+						
 						<p class="style1">The primary objective of IEEE International Symposium on Smart Electronic
 							Systems
 							(IEEE – iSES) is to provide a platform for both hardware and software researchers to
@@ -359,7 +392,7 @@
 							successful
 							meetings including ASAP, ISVLSI, and ARITH, are now presented as “Sister Conferences”.</p>
 					</div>
-					div class="container">
+					
 					<p class="style1" style="text-align: center;">
 						<a target="_blank" href="https://cmt3.research.microsoft.com/IEEEiSeS2025" class="button-link">
 							Submission Link
@@ -401,6 +434,11 @@
 		</div>
 	</section>
 
+	<div class="scrolling-announcement">
+  <a href="call-for-contributions.html" style="color: red; text-decoration: none; font-size: large;">
+    🔔 22 July 2025: The paper submission deadline has been extended to August 10th for various contributions, including RDS and SRF.
+  </a>
+</div>
 
 	<div class="scrollable-boxes-container">
 		<!-- First Box: Announcements -->
