@@ -1,186 +1,507 @@
 <!DOCTYPE HTML>
 <!--
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Escape Velocity by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-
 <head>
-	<!-- v ieee cookie banner v -->
-<script src="https://cmp.osano.com/AzyzptTmRlqVd2LRf/868a3f52-fe86-4a0a-8d4c-7d633f6821c5/osano.js"></script>
-<link rel="stylesheet" href="https://cookie-consent.ieee.org/ieee-cookie-banner.css" type="text/css"/>
-<!-- ^ ieee cookie banner ^ -->
-    <title>IEEE-iSES</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-	<style>
-		/* General styling for the main content */
-		/* Ensure the scrollable boxes come below the main content */
-		/* Button-like style for the link */
-		.button-link {
-			display: inline-block;
-			padding: 10px 20px;
-			/* Padding for button size */
-			background-color: rgb(2, 62, 102);
-			/* Button background color */
-			color: #fff;
-			/* White text color */
-			text-decoration: none;
-			/* Remove underline */
-			border-radius: 5px;
-			/* Rounded corners */
-			font-size: 1.2em;
-			/* Increase font size */
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-			/* Add subtle shadow */
-			transition: background-color 0.3s ease;
-			/* Smooth hover transition */
-		}
+  <!-- v ieee cookie banner v -->
+  <script src="https://cmp.osano.com/AzyzptTmRlqVd2LRf/868a3f52-fe86-4a0a-8d4c-7d633f6821c5/osano.js"></script>
+  <link rel="stylesheet" href="https://cookie-consent.ieee.org/ieee-cookie-banner.css" type="text/css"/>
+  <!-- ^ ieee cookie banner ^ -->
+  <title>IEEE-iSES</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-		.button-link:hover {
-			background-color: rgb(0, 51, 88);
-			/* Darker blue on hover */
-		}
-		</style>
+  <style>
+	/* Full-width schedule section */
+.wrapper.schedule-wrap { 
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.wrapper.schedule-wrap > .container {
+  max-width: none;   /* remove 1200px cap */
+  width: 80%;       /* fill the viewport */
+  padding-left: 0;   /* remove side gutters */
+  padding-right: 0;
+}
+
+/* Add some internal breathing room for the grid itself */
+.wrapper.schedule-wrap .days-grid {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+    /* ---------- Existing button style ---------- */
+    .button-link {
+      display:inline-block; padding:10px 20px; background-color:rgb(2,62,102);
+      color:#fff; text-decoration:none; border-radius:5px; font-size:1.2em;
+      box-shadow:0 2px 5px rgba(0,0,0,.2); transition:background-color .3s ease;
+    }
+    .button-link:hover { background-color:rgb(0,51,88); }
+
+    /* ---------- Program Schedule styles ---------- */
+    :root{
+      --clr-keynote:#f6b500;       /* gold */
+      --clr-registration:#2a9d8f;  /* gray */
+      --clr-tea:#c0a98b;           /* tea/brown */
+      --clr-lunch:#7ac37a;         /* green */
+      --clr-panel:#555b6e;         /* dark gray */
+      --clr-women:#c05299;         /* magenta */
+      --clr-banquet:#7b2cbf;       /* purple */
+      --clr-validatory:#2a9d8f;    /* teal */
+
+      /* Tracks / sessions */
+      --clr-sab:#185adb;           /* blue */
+      --clr-ers:#185adb;           /* violet */
+      --clr-ioth:#185adb;          /* teal */
+      --clr-nvs:#185adb;           /* orange */
+      --clr-sip:#185adb;           /* pink/red */
+      --clr-csn:#185adb;           /* indigo */
+      --clr-srf:#3a0ca3;           /* green */
+      --clr-rds:#2f9e44;           /* red */
+      --clr-special:#6a4c93;       /* slate */
+    }
+
+	/* tighten the spacing between the "Program Schedule" heading and the cards */
+#intro.wrapper.style2 {
+  padding-bottom: 0.75rem;     /* was big */
+  margin-bottom: 0;            /* remove extra gap below intro */
+}
+
+.wrapper.schedule-wrap {
+  padding-top: 0.75rem;        /* reduce top padding above cards */
+  margin-top: 0;               /* ensure no extra margin */
+  font-size: 1.05rem;
+}
+
+/* optional: tighten day-card spacing */
+.wrapper.schedule-wrap .days-grid {
+  margin-top: 0.25rem;         /* small nudge */
+}
+
+/* optional: make the day title closer to first session */
+.day-card h3 {
+  margin: 0.1rem 0 0.5rem;     /* less space above/below */
+}
+
+/* if the theme injects extra spacing between consecutive sections */
+#intro + .wrapper.schedule-wrap {
+  margin-top: 0 !important;
+}
+
+/* (optional) If you want the schedule truly full-width, switch 80% -> 100% */
+.wrapper.schedule-wrap > .container {
+  width: 100%;                 /* was 80% */
+}
+
+
+    .schedule-wrap{ padding:2.5rem 0; }
+    .schedule-legend{
+      display:flex; flex-wrap:wrap; gap:.5rem 1rem; margin:0 0 1rem 0; align-items:center;
+      font-size:.95rem;
+    }
+    .legend-chip{
+      display:inline-flex; align-items:center; gap:.5rem; padding:.25rem .55rem;
+      border-radius:999px; background:#f4f6f8; border:1px solid rgba(0,0,0,.06);
+    }
+    .chip-swatch{ width:14px; height:14px; border-radius:3px; display:inline-block; }
+
+    .days-grid{
+      display:grid; gap:1.25rem;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    }
+    .day-card{
+      border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:1rem 1rem 0.5rem;
+      box-shadow:0 2px 14px rgba(0,0,0,.04); background:#fff;
+    }
+    .day-card h3{ margin:.25rem 0 .75rem; font-size:1.25rem; }
+    .session{
+      display:grid; grid-template-columns:115px 1fr; gap:.75rem;
+      padding:.6rem .6rem; border-radius:10px; margin:.5rem 0;
+      border:1px dashed rgba(0,0,0,.06); background:#fafbfc;
+    }
+    .time{ font-weight:600; color:#334155; }
+    .badge{
+      display:inline-block; padding:.15rem .5rem; margin:0 .25rem .25rem 0;
+      border-radius:999px; font-size:.85rem; line-height:1.4; color:#fff;
+      white-space:nowrap;
+    }
+
+    /* Badge color helpers */
+    .b-keynote{background:var(--clr-keynote); color:#1c1600;font-size: 1.05rem;}
+    .b-registration{background:var(--clr-registration);font-size: 1.05rem;}
+    .b-tea{background:var(--clr-tea);font-size: 1.05rem;}
+    .b-lunch{background:var(--clr-lunch); color:#0b3d0b;font-size: 1.05rem;}
+    .b-panel{background:var(--clr-panel);font-size: 1.05rem;}
+    .b-women{background:var(--clr-women);font-size: 1.05rem;}
+    .b-banquet{background:var(--clr-banquet);font-size: 1.05rem;}
+    .b-validatory{background:var(--clr-validatory);font-size: 1.05rem;}
+
+    .b-sab{background:var(--clr-sab);font-size: 1.05rem;}
+    .b-ers{background:var(--clr-ers);font-size: 1.05rem;}
+    .b-ioth{background:var(--clr-ioth);font-size: 1.05rem;}
+    .b-nvs{background:var(--clr-nvs);font-size: 1.05rem;}
+    .b-sip{background:var(--clr-sip);font-size: 1.05rem;}
+    .b-csn{background:var(--clr-csn);font-size: 1.05rem;}
+    .b-srf{background:var(--clr-srf);font-size: 1.05rem;}
+    .b-rds{background:var(--clr-rds);font-size: 1.05rem;}
+    .b-special{background:var(--clr-special);}
+    .badge + .badge{ margin-left:.25rem; }
+    .session-notes{ font-size:.9rem; color:#596579; }
+  </style>
 </head>
 
 <body class="homepage is-preload">
-    <div id="page-wrapper">
+  <div id="page-wrapper">
 
-        <!-- Header -->
-        <section id="header" class="wrapper">
+    <!-- Header -->
+    <section id="header" class="wrapper">
+      <!-- Logo -->
+      <div id="logo">
+        <h1>IEEE-iSES</h1>
+        <p>15-17 December 2025, Jaipur, India</p>
+      </div>
 
-            <!-- Logo -->
-            <div id="logo">
-                <h1>IEEE-iSES</h1>
-                <p>15-17 December 2025, Jaipur, India</p>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">About Us</a>
+            <ul>
+              <li>
+                <a href="#">Committees</a>
+                <ul>
+                  <li><a href="steering-committee.html">Steering Committee</a></li>
+                  <li><a href="organizing-committee.html">Organizing Committee</a></li>
+                  <li><a href="program-committee.html">Program Committee</a></li>
+                </ul>
+              </li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="sponsorship.html">Sponsorship</a></li>
+              <li><a href="statements.html">Statements</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Program</a>
+            <ul>
+              <li><a href="#">Live Proceedings</a></li>
+              <li><a href="program-schedule.html">Program Schedule</a></li>
+              <li><a href="keynotes.html">Keynotes</a></li>
+              <li><a href="panel-discussions.html">Panel Discussions</a></li>
+              <li><a href="preconference-tutorials.html">Preconference Tutorials</a></li>
+              <li><a href="women-in-engineering.html">Women in Engineering (WIE)</a></li>
+              <li><a href="best-paper-award.html">Best Paper Awards</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Authors Information</a>
+            <ul>
+              <li><a href="important-dates.html">Important Dates</a></li>
+              <li><a href="manuscript-information.html">Initial Manuscript Information</a></li>
+              <li><a href="pdf-express.html">PDF Express Instructions</a></li>
+              <li><a href="camera-ready.html">Final Camera-ready Submission Instructions</a></li>
+              <li><a href="submission-link.html">Final Camera-ready Submission Link</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="call-for-contributions.html">Call for Contributions</a>
+            <ul>
+              <li><a href="cfp.html">Call for Papers</a></li>
+              <li><a href="cfp-ss.html">Call for Special Sessions</a></li>
+              <li><a href="cfp-rds.html">Call for Papers RDS</a></li>
+              <li><a href="cfp-srf.html">Call for Papers SRF</a></li>
+              <li><a href="cfp-pct.html">Call for Pre-Conference Tutorials (PCT)</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Registration</a>
+            <ul>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="student-support-grants.html">Student Support Grants</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Venue</a>
+            <ul>
+              <li><a href="venue.html">Venue</a></li>
+              <li><a href="accommodation.html">Accommodation</a></li>
+              <li><a href="places-to-see.html">Places to See</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Links</a>
+            <ul>
+              <li><a href="https://www.linkedin.com/groups/12506886/">LinkedIn Group</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="#">Past Conferences</a>
+            <ul>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2024_Website/">2024 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/10883943/proceeding?isnumber=10884076&sortType=vol-only-seq&pageNumber=1">2024 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2023_Website/ieee-ises.org/2023/">2023 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/10467041/proceeding">2023 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2022_Website/">2022 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/10026847/proceeding">2022 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2021_Website/">2021 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/9700979/proceeding">2021 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2020_Website/">2020 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/9426059/proceeding">2020 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2019_Website/">2019 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/8977828/proceeding">2019 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2018_Website/">2018 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/8716489/proceeding">2018 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2017_Website/">2017 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/8293729/proceeding">2017 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2016_Website/">2016 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/7827705/proceeding">2016 Proceedings</a></li>
+              <li><a href="https://ieee-ises.github.io/IEEE-iSES_2015_Website/">2015 Website</a></li>
+              <li><a href="https://ieeexplore.ieee.org/xpl/conhome/7434373/proceeding">2015 Proceedings</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Intro -->
+    <section id="intro" class="wrapper style2">
+      <div class="title">Program Schedule</div>
+    </section>
+
+    <!-- Program Schedule Content -->
+    <section class="wrapper schedule-wrap">
+      <div class="container">
+        <!-- <div class="schedule-legend">
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-registration)"></span>Registration</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-keynote)"></span>Keynote</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-tea)"></span>Tea</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-lunch)"></span>Lunch + Posters</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-panel)"></span>Panel</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-women)"></span>WIE Panel</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-banquet)"></span>Banquet</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-validatory)"></span>Valedictory</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-sab)"></span>SAB</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-ers)"></span>ERS</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-ioth)"></span>IoTH</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-nvs)"></span>NVS</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-sip)"></span>SIP</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-csn)"></span>CSN</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-srf)"></span>SRF</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-rds)"></span>RDS</span>
+          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-special)"></span>Special Session</span>
+        </div> -->
+
+        <div class="days-grid">
+
+          <!-- Day 1 -->
+          <article class="day-card">
+            <h3>15 Dec 2025 (Monday)</h3>
+
+            <div class="session">
+              <div class="time">09:00–09:30</div>
+              <div><span class="badge b-registration">Registration</span></div>
             </div>
-           			<!-- Nav -->
-					   <nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#">About Us</a>
-								<ul>
-									<li>
-										<a href="#">Committees</a>
-										<ul>
-											<li><a href="steering-committee.html">Steering Committee</a></li>
-											<li><a href="organizing-committee.html">Organizing Committee</a></li>
-											<li><a href="program-committee.html">Program Committee</a></li>
-										</ul>
-									</li>
-									<li><a href="privacy-policy.html">Privacy Policy</a></li>
-									<li><a href="sponsorship.html">Sponsorship</a></li>
-									<li><a href="statements.html">Statements</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Program</a>
-								<ul>
-									<li><a href="#">Live Proceedings</a></li>
-									<li><a href="program-schedule.html">Program Schedule</a></li>
-									<li><a href="keynotes.html">Keynotes</a></li>
-									<li><a href="panel-discussions.html">Panel Discussions</a></li>
-									<li><a href="preconference-tutorials.html">Preconference Tutorials</a></li>
-									<li><a href="women-in-engineering.html">Women in Engineering (WIE)</a></li>
-									<li><a href="best-paper-award.html">Best Paper Awards</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Authors Information</a>
-								<ul>
-									<li><a href="important-dates.html">Important Dates</a></li>
-									<li><a href="manuscript-information.html">Initial Manuscript Information</a></li><li><a href="pdf-express.html">PDF Express Instructions</a></li>
-									<li><a href="camera-ready.html">Final Camera-ready Submission Instructions</a></li><li><a href="submission-link.html">Final Camera-ready Submission Link</a></li>
-									
-								</ul>
-							</li>
-							<li><a href="call-for-contributions.html">Call for Contributions</a><ul>	<li><a href="cfp.html">Call for Papers</a></li>	<li><a href="cfp-ss.html">Call for Special Sessions</a></li><li><a href="cfp-rds.html">Call for Papers RDS</a></li><li><a href="cfp-srf.html">Call for Papers SRF</a></li><li><a href="cfp-pct.html">Call for Pre-Conference Tutorials (PCT)</a></li></ul></li>
-							<li>
-								<a href="#">Registration</a>
-								<ul>
-									<li><a href="register.html">Register</a></li>
-									<li><a href="student-support-grants.html">Student Support Grants</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Venue</a>
-								<ul>
-									<li><a href="venue.html">Venue</a></li>
-									<li><a href="accommodation.html">Accommodation</a></li>
-									<li><a href="places-to-see.html">Places to See</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Links</a>
-								<ul>
-									<li><a href="https://www.linkedin.com/groups/12506886/">LinkedIn Group</a></li>
-								</ul>
-							</li>
-							<li><a href="contact.html">Contact</a></li>
-							<li>
-								<a href="#">Past Conferences</a>
-								<ul>
-									<li>
-										<a href="https://ieee-ises.github.io/IEEE-iSES_2024_Website/">2024 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/10883943/proceeding?isnumber=10884076&sortType=vol-only-seq&pageNumber=1">2024 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2023_Website/ieee-ises.org/2023/">2023 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/10467041/proceeding">2023 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2022_Website/">2022 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/10026847/proceeding">2022 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2021_Website/">2021 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/9700979/proceeding">2021 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2020_Website/">2020 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/9426059/proceeding">2020 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2019_Website/">2019 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/8977828/proceeding">2019 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2018_Website/">2018 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/8716489/proceeding">2018 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2017_Website/">2017 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/8293729/proceeding">2017 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2016_Website/">2016 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/7827705/proceeding">2016 Proceedings</a></li>
-										<li><a href="https://ieee-ises.github.io/IEEE-iSES_2015_Website/">2015 Website</a></li>
-										<li><a href="https://ieeexplore.ieee.org/xpl/conhome/7434373/proceeding">2015 Proceedings</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-        </section>
 
-        <!-- Intro -->
-        <section id="intro" class="wrapper style2">
-            <div class="title">Program Schedule</div>
-          
-        </section>
-
-
-
-        <!-- Footer -->
-        <section id="footer" class="wrapper">
-            <div class="container">
-                <div id="copyright">
-                    <ul>
-                        <li>&copy; IEEE-iSES 2015 - 2025</li>
-                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
-                </div>
+            <div class="session">
+              <div class="time">09:30–10:30</div>
+              <div><span class="badge b-keynote">Inaugural Session</span></div>
             </div>
-        </section>
 
-    </div>
+            <div class="session">
+              <div class="time">10:30–11:00</div>
+              <div><span class="badge b-tea">Tea</span></div>
+            </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+            <div class="session">
+              <div class="time">11:00–12:00</div>
+              <div><span class="badge b-keynote">Keynote Session-1</span></div>
+            </div>
 
+            <div class="session">
+              <div class="time">12:00–13:30</div>
+              <div>
+                <span class="badge b-sab">SAB Track-1</span>
+                <span class="badge b-ioth">IoTH Track-1</span>
+                <span class="badge b-nvs">NVS Track-1</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">13:30–14:30</div>
+              <div><span class="badge b-lunch">Lunch Break + Poster</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">14:30–15:30</div>
+              <div><span class="badge b-keynote">Keynote Session-2</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">15:30–17:00</div>
+              <div>
+                <span class="badge b-sab">SAB Track-2</span>
+                <span class="badge b-ioth">IoTH Track-2</span>
+                <span class="badge b-nvs">NVS Track-2</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">17:00–18:00</div>
+              <div><span class="badge b-panel">Panel Discussion</span></div>
+            </div>
+          </article>
+
+          <!-- Day 2 -->
+          <article class="day-card">
+            <h3>16 Dec 2025 (Tuesday)</h3>
+
+            <div class="session">
+              <div class="time">09:00–09:30</div>
+              <div><span class="badge b-registration">Registration</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">09:30–10:30</div>
+              <div><span class="badge b-keynote">Keynote Session-3</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">10:30–12:00</div>
+              <div>
+                <span class="badge b-sab">SAB Track-3</span>
+                <span class="badge b-ioth">IoTH Track-3</span>
+                <span class="badge b-ers">ERS Track-1</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">12:00–13:30</div>
+              <div>
+                <span class="badge b-rds">RDS Session</span>
+                <span class="badge b-srf">SRF Session</span>
+                <span class="badge b-ers"> ERS Track-2</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">13:30–14:30</div>
+              <div><span class="badge b-lunch">Lunch Break + Poster</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">14:30–15:30</div>
+              <div><span class="badge b-keynote">Keynote Session-4</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">15:30–17:00</div>
+              <div>
+                <span class="badge b-sip">SIP Track</span>
+                <span class="badge b-csn">CSN Track</span>
+				<span class="badge b-srf">SRF/RDS Session</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">17:00–18:00</div>
+              <div><span class="badge b-women">Women Panel Discussion</span></div>
+            </div>
+			<div class="session">
+              <div class="time">18:30–21:30</div>
+              <div><span class="badge b-banquet">Banquet Dinner</span></div>
+            </div>
+          </article>
+
+          <!-- Day 3 -->
+          <article class="day-card">
+            <h3>17 Dec 2025 (Wednesday)</h3>
+
+            <div class="session">
+              <div class="time">09:00–09:30</div>
+              <div><span class="badge b-registration">Registration</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">09:30–10:30</div>
+              <div><span class="badge b-keynote">Keynote Session-5</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">10:30–12:00</div>
+              <div>
+                <span class="badge b-special">Special Session-1</span>
+                <span class="badge b-special">Special Session-2</span>
+				<span class="badge b-special">Special Session-3</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">12:00–13:30</div>
+              <div>
+                <span class="badge b-special">Special Session-4</span>
+                <span class="badge b-special">Special Session-5</span>
+                <span class="badge b-special">Special Session-6</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">13:30–14:30</div>
+              <div><span class="badge b-lunch">Lunch Break + Poster</span></div>
+            </div>
+
+            <div class="session">
+              <div class="time">14:30–15:30</div>
+              <div>
+                <span class="badge b-keynote">Keynote Session-6</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">15:30–17:00</div>
+              <div>
+				<span class="badge b-special">Special Session-7</span>
+                <span class="badge b-special">Special Session-8</span>
+                <span class="badge b-special">Special Session-9</span>
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="time">17:00–18:00</div>
+              <div><span class="badge b-validatory">Valedictory Session</span></div>
+            </div>
+          </article>
+
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="wrapper">
+      <div class="container">
+        <div id="copyright">
+          <ul>
+            <li>&copy; IEEE-iSES 2015 - 2025</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
