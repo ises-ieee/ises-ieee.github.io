@@ -666,28 +666,196 @@
 </section>
 
 
-	<section id="sponsors" class="wrapper style3">
-		<div class="container">
-			<h2 style="text-align: center; color: black; font-size: x-large; font-weight: bold;">Our Sponsors</h2>
-			<br>
+	<!-- Sponsors section: responsive, avoids overlapping logos -->
+<section id="sponsors" class="sponsor-section">
+  <style>
+    /* Typography to match keynote speakers (keeps headings & caption styling consistent) */
+    .sponsor-section { background-color: white; padding: 20px 0; }
+    .sponsor-section .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+    .sponsor-section h2 {
+      text-align: center;
+      color: black;
+      font-size: x-large;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+    }
+
+    .sponsor-section p.caption {
+      margin-top: 10px;
+      font-size: 1em;
+      line-height: 1.4em;
+      color: #000000;
+      font-weight: 600;
+    }
+
+    /* grid wrapper */
+    .sponsor-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    /* each sponsor card */
+    .sponsor-item {
+      flex: 1 1 240px;    /* allows grow/shrink, base 240px */
+      max-width: 320px;   /* prevents overly wide items */
+      text-align: center;
+      box-sizing: border-box;
+      padding: 8px;
+    }
+
+    /* images scale safely inside their card */
+    .sponsor-item img.sponsor-logo {
+      display: block;
+      width: 100%;        /* fill card width */
+      height: auto;       /* preserve aspect ratio */
+      max-height: 120px;  /* cap visual height so rows align */
+      object-fit: contain;
+      margin: 0 auto;
+      background: transparent;
+    }
+
+    /* slightly smaller images for support/organizer rows if desired */
+    .sponsor-item.organizer img.sponsor-logo,
+    .sponsor-item.support img.sponsor-logo {
+      max-height: 110px;
+    }
+
+    /* small screens: stack vertically */
+    @media (max-width: 640px) {
+      .sponsor-item { flex: 1 1 100%; max-width: 100%; }
+      .sponsor-item img.sponsor-logo { max-height: 90px; }
+    }
+  </style>
+
+  <div class="container">
+    <!-- Organizing Institute -->
+    <h2>Organizing Institute</h2>
+    <div class="sponsor-grid" aria-label="Organizing Institute">
+      <div class="sponsor-item organizer">
+        <a href="https://www.mnit.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Malaviya National Institute of Technology Jaipur">
+          <img class="sponsor-logo"
+               src="images/sponsors/malaviya-nit-jaipur.png"
+               alt="Malaviya National Institute of Technology, Jaipur"
+               data-placeholder="Malaviya NIT Jaipur">
+        </a>
+        <p class="caption"><strong>Malaviya National Institute of Technology, Jaipur</strong></p>
+      </div>
+    </div>
+
+    <hr style="border:none; border-top:1px solid #eee; margin:12px 0;">
+
+    <!-- With support from -->
+    <h2>With Support From</h2>
+    <div class="sponsor-grid" aria-label="With support from">
+      <div class="sponsor-item support">
+        <a href="https://oui.edu.in/" target="_blank" rel="noopener noreferrer" aria-label="Oriental University Indore">
+          <img class="sponsor-logo"
+               src="images/sponsors/oriental-university-indore.png"
+               alt="Oriental University, Indore"
+               data-placeholder="Oriental University, Indore">
+        </a>
+        <p class="caption"><strong>Oriental University, Indore</strong></p>
+      </div>
+
+      <div class="sponsor-item support">
+        <a href="https://www.iete.org/iete-membership/" target="_blank" rel="noopener noreferrer" aria-label="IETE">
+          <img class="sponsor-logo"
+               src="images/sponsors/iete.png"
+               alt="IETE"
+               data-placeholder="IETE">
+        </a>
+        <p class="caption"><strong>IETE</strong></p>
+      </div>
+    </div>
+
+    <hr style="border:none; border-top:1px solid #eee; margin:12px 0;">
+
+    <!-- Main Sponsors -->
+    <h2>Our Sponsors</h2>
+    <div class="sponsor-grid" aria-label="Our sponsors">
+      <div class="sponsor-item">
+        <a href="https://www.marvell.com/" target="_blank" rel="noopener noreferrer" aria-label="Marvell Bengaluru">
+          <img class="sponsor-logo"
+               src="images/sponsors/marvell-bengaluru.png"
+               alt="Marvell Bengaluru"
+               data-placeholder="Marvell Bengaluru">
+        </a>
+        <p class="caption"><strong>Marvell, Bengaluru</strong></p>
+      </div>
+
+      <div class="sponsor-item">
+        <a href="https://www.qualcomm.com/" target="_blank" rel="noopener noreferrer" aria-label="Qualcomm Bengaluru">
+          <img class="sponsor-logo"
+               src="images/sponsors/qualcomm-bengaluru.png"
+               alt="Qualcomm Bengaluru"
+               data-placeholder="Qualcomm Bengaluru">
+        </a>
+        <p class="caption"><strong>Qualcomm, Bengaluru</strong></p>
+      </div>
+
+      <div class="sponsor-item">
+        <a href="https://www.hrdwyr.com/" target="_blank" rel="noopener noreferrer" aria-label="Hrdwyr Bengaluru">
+          <img class="sponsor-logo"
+               src="images/sponsors/hrdwyr-bengaluru.svg"
+               alt="Hrdwyr Bengaluru"
+               data-placeholder="Hrdwyr Bengaluru">
+        </a>
+        <p class="caption"><strong>Hrdwyr, Bengaluru</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Placeholder script: if image file missing, replace with inline SVG label.
+       Remove this script if you already use an equivalent site-wide script. -->
+  <script>
+    (function() {
+      function makeSVGDataURI(text, w = 600, h = 180, bg = '#f8f8f8', fg = '#333') {
+        var svg = "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'>" +
+          "<rect width='100%' height='100%' fill='" + bg + "'/>" +
+          "<text x='50%' y='50%' font-family='Helvetica, Arial, sans-serif' font-size='24' fill='" + fg + "' dominant-baseline='middle' text-anchor='middle'>" +
+          escapeHtml(text) +
+          "</text></svg>";
+        return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+      }
+
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function (m) {
+          return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var imgs = document.querySelectorAll('img.sponsor-logo');
+        imgs.forEach(function(img) {
+          // only attach handler if not already successfully loaded
+          img.addEventListener('error', function() {
+            var label = img.getAttribute('data-placeholder') || img.alt || 'Logo';
+            img.src = makeSVGDataURI(label, 600, 180);
+            img.style.objectFit = 'contain';
+          });
+
+          // handle case where image already failed to load before handler was attached
+          setTimeout(function() {
+            if (img.naturalWidth === 0) {
+              var label = img.getAttribute('data-placeholder') || img.alt || 'Logo';
+              img.src = makeSVGDataURI(label, 600, 180);
+              img.style.objectFit = 'contain';
+            }
+          }, 50);
+        });
+      });
+    })();
+  </script>
+</section>
 
 
 
-			<!-- <div style="text-align: center; margin-bottom: 30px;">
-					<a href="https://www.cdac.in/" target="_blank">
-						<img src="images/Sponsors/CDAC LOGO.png" alt="CDAC" style="width: auto; height: 200px; padding: 10px; "> 
-					</a>
-				</div>
-				
-				
-				<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px;">
-					<a href="https://ieee-cas.org/" target="_blank">
-						<img src="images/Sponsors/ieee_cass_dc.png" alt="IEEE_CASS_DC" style="width: auto; height: 130px; padding: 10px;">
-					</a>
-				</div> -->
 
-		</div>
-	</section>
 	<div
 		style="position: fixed; bottom: 0; width: 100%; background: #023e66; color: white; text-align: center; padding: 8px 0; font-size: 0.95em; z-index: 999;">
 		Contact Us:
