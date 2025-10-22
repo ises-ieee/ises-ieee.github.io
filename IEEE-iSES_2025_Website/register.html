@@ -68,9 +68,49 @@
       grid-template-columns: 1fr;
     }
   }
+  
 </style>
 
 </style>
+
+<style>
+  /* Center the PayPal block and give it breathing room */
+  .paypal-wrap {
+    max-width: 480px;
+    margin: 10px auto 30px auto;
+  }
+  /* Neutralize aggressive text wrapping that forces vertical letters */
+  .paypal-wrap, 
+  .paypal-wrap * {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  /* Hide extra PayPal product header text */
+  #paypal-container-2KRC4EDH6JSNS h3,
+  #paypal-container-2KRC4EDH6JSNS p:first-of-type {
+    display: none !important;
+  }
+
+  /* Center PayPal block and limit width */
+  .paypal-wrapper {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    max-width: 350px; /* adjust as needed */
+    margin: 0 auto;
+  }
+
+  /* Prevent text overflow or wrapping inside PayPal area */
+  .paypal-wrapper * {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+</style>
+
 
 </head>
 
@@ -262,7 +302,7 @@
           <td>$275</td>
         </tr>
         <tr>
-          <td>Non-Authors / Delegates</td>
+          <td>Non-Authors/Delegates/Additonal-paper</td>
           <td>$165</td>
           <td>$180</td>
         </tr>
@@ -310,7 +350,7 @@
           <td>₹ 18,500</td>
         </tr>
         <tr>
-          <td>Non-Authors / Delegates</td>
+          <td>Non-Authors/Delegates/Additonal-paper</td>
           <td>₹ 13,000</td>
           <td>₹ 14,000</td>
         </tr>
@@ -357,6 +397,21 @@
 </div>
 <br>
 <!-- END: Payment Portal & Bank Details -->
+
+<!-- BEGIN: PayPal Payment Option -->
+<h2 style="color:#011c4d; text-align:center;">Pay via PayPal (International Participants)</h2>
+
+<div class="paypal-wrap">
+  <div id="paypal-container-2KRC4EDH6JSNS"></div>
+</div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAAL2dkVmyDLkuh-CWfMrbrX3DscQ_mdsSYTYsOrs8MshhCMZwiXqzrB8cieXmmrl2wPRx8bafI5gwNDiM&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "2KRC4EDH6JSNS",
+  }).render("#paypal-container-2KRC4EDH6JSNS");
+</script>
+<!-- END: PayPal Payment Option -->
 
 
 
@@ -434,10 +489,18 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script src="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.paypal.com%2Fsdk%2Fjs%3Fclient-id%3DBAAL2dkVmyDLkuh-CWfMrbrX3DscQ_mdsSYTYsOrs8MshhCMZwiXqzrB8cieXmmrl2wPRx8bafI5gwNDiM%26components%3Dhosted-buttons%26disable-funding%3Dvenmo%26currency%3DUSD&data=05%7C02%7CAnandKumarBapatla%40my.unt.edu%7C73bdceb0bbe74853b39408dd103dd0da%7C70de199207c6480fa318a1afcba03983%7C0%7C0%7C638684580530268772%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C40000%7C%7C%7C&sdata=Ym8WcYxMJ5amdvZcRT6z%2BsW2zi9xEAhkSHmIQtwKVLc%3D&reserved=0"></script>
-	<script>
-		paypal.HostedButtons({ hostedButtonId: "2UPXHDZGURVVW",
-		}).render("#paypal-container-2UPXHDZGURVVW") </script>
+	<!-- Additional PayPal Payment Button -->
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAL2dkVmyDLkuh-CWfMrbrX3DscQ_mdsSYTYsOrs8MshhCMZwiXqzrB8cieXmmrl2wPRx8bafI5gwNDiM&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
+
+<div id="paypal-container-2KRC4EDH6JSNS"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "2KRC4EDH6JSNS",
+  }).render("#paypal-container-2KRC4EDH6JSNS");
+</script>
+
 </body>
 
 </html>
