@@ -44,6 +44,61 @@
 			/* Darker blue on hover */
 		}
 		</style>
+		<style>
+		td {
+			text-align: center;
+			color: #000000;
+			font-weight: 400;
+		}
+
+		th {
+			text-align: center;
+			color: #000000;
+			background-color: #989a9b;
+		}
+		p{
+			color: #000000;
+		}
+	</style>
+
+  <style>
+  .notice-box {
+    border: 1px solid #d0d7de;
+    padding: 16px;
+    border-radius: 10px;
+    background: #f8fafc;
+  }
+  .payment-box {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .payment-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 8px 14px;
+    margin: 0;
+  }
+  .payment-grid dt {
+    font-weight: 600;
+    color: #0b132b;
+  }
+  .payment-grid dd {
+    margin: 0;
+    color: #111;
+  }
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    letter-spacing: 0.3px;
+  }
+  @media (max-width: 640px) {
+    .payment-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+</style>
 </head>
 
 <body class="homepage is-preload">
@@ -103,7 +158,7 @@
 								<a href="#">Registration</a>
 								<ul>
 									<li><a href="register.html">Register</a></li>
-									<li><a href="student-support-grants.html">Student Support Grants</a></li>
+									<li><a href="student-support-grants.html">Student Support Grants</a></li><li><a href="faculty-support-grants.html">Faculty Support Grants</a></li>
 								</ul>
 							</li>
 							<li>
@@ -151,11 +206,41 @@
 					</nav>
         </section>
 
-        <!-- Intro -->
-        <section id="intro" class="wrapper style2">
-            <div class="title">Student Support Grants</div>
+       <!-- Intro -->
+<section id="intro" class="wrapper style2">
+    <div class="title">Student Support Grants</div>
+    <div class="container">
+        <p style="text-align: justify;">
+            A limited number of Student Travel Support Grants are available for those attending IEEE iSES 2025.
             
-        </section>
+        </p>
+		<p style="text-align: justify;">
+            
+            Shortlisted candidates will be notified and must register for the conference by paying the eligible
+            registration fee (student fee for RDS/SRF, full fee for paper if presenting, delegate fee if co-author).
+            Participants with partial funding from their respective organizations will be given preference.
+        </p>
+
+        <p style="text-align: justify;">
+            Please indicate the specific type of support you need: <strong>Travel, Accommodation, or Both</strong>.
+            This helps us extend support to a larger number of participants.
+        </p>
+
+        <p style="text-align: justify;">
+            For any queries, please email <a style="color: red;" href="mailto:ieeeises2025@mnit.ac.in">ieeeises2025@mnit.ac.in</a> with
+            <strong>“Support Grant”</strong> in the subject.
+        </p>
+        
+        <p style="text-align: justify; font-weight: bold;">
+            Please submit your applications ONLY through Microsoft CMT.
+        </p>
+
+        <p style="text-align: justify;">
+            Welcome to iSES 2025 and the heritage city of Jaipur.
+        </p>
+    </div>
+</section>
+
 
 
 
