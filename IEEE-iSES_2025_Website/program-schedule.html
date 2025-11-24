@@ -16,142 +16,108 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-	/* Full-width schedule section */
-.wrapper.schedule-wrap { 
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.wrapper.schedule-wrap > .container {
-  max-width: none;   /* remove 1200px cap */
-  width: 80%;       /* fill the viewport */
-  padding-left: 0;   /* remove side gutters */
-  padding-right: 0;
-}
-
-/* Add some internal breathing room for the grid itself */
-.wrapper.schedule-wrap .days-grid {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-    /* ---------- Existing button style ---------- */
-    .button-link {
-      display:inline-block; padding:10px 20px; background-color:rgb(2,62,102);
-      color:#fff; text-decoration:none; border-radius:5px; font-size:1.2em;
-      box-shadow:0 2px 5px rgba(0,0,0,.2); transition:background-color .3s ease;
-    }
-    .button-link:hover { background-color:rgb(0,51,88); }
-
-    /* ---------- Program Schedule styles ---------- */
-    :root{
-      --clr-keynote:#f6b500;       /* gold */
-      --clr-registration:#2a9d8f;  /* gray */
-      --clr-tea:#c0a98b;           /* tea/brown */
-      --clr-lunch:#7ac37a;         /* green */
-      --clr-panel:#555b6e;         /* dark gray */
-      --clr-women:#c05299;         /* magenta */
-      --clr-banquet:#7b2cbf;       /* purple */
-      --clr-validatory:#2a9d8f;    /* teal */
-
-      /* Tracks / sessions */
-      --clr-sab:#185adb;           /* blue */
-      --clr-ers:#185adb;           /* violet */
-      --clr-ioth:#185adb;          /* teal */
-      --clr-nvs:#185adb;           /* orange */
-      --clr-sip:#185adb;           /* pink/red */
-      --clr-csn:#185adb;           /* indigo */
-      --clr-srf:#3a0ca3;           /* green */
-      --clr-rds:#2f9e44;           /* red */
-      --clr-special:#6a4c93;       /* slate */
+    #intro.wrapper.style2 {
+      padding-bottom: 0.75rem;
+      margin-bottom: 0;
     }
 
-	/* tighten the spacing between the "Program Schedule" heading and the cards */
-#intro.wrapper.style2 {
-  padding-bottom: 0.75rem;     /* was big */
-  margin-bottom: 0;            /* remove extra gap below intro */
-}
-
-.wrapper.schedule-wrap {
-  padding-top: 0.75rem;        /* reduce top padding above cards */
-  margin-top: 0;               /* ensure no extra margin */
-  font-size: 1.05rem;
-}
-
-/* optional: tighten day-card spacing */
-.wrapper.schedule-wrap .days-grid {
-  margin-top: 0.25rem;         /* small nudge */
-}
-
-/* optional: make the day title closer to first session */
-.day-card h3 {
-  margin: 0.1rem 0 0.5rem;     /* less space above/below */
-}
-
-/* if the theme injects extra spacing between consecutive sections */
-#intro + .wrapper.schedule-wrap {
-  margin-top: 0 !important;
-}
-
-/* (optional) If you want the schedule truly full-width, switch 80% -> 100% */
-.wrapper.schedule-wrap > .container {
-  width: 100%;                 /* was 80% */
-}
-
-
-    .schedule-wrap{ padding:2.5rem 0; }
-    .schedule-legend{
-      display:flex; flex-wrap:wrap; gap:.5rem 1rem; margin:0 0 1rem 0; align-items:center;
-      font-size:.95rem;
-    }
-    .legend-chip{
-      display:inline-flex; align-items:center; gap:.5rem; padding:.25rem .55rem;
-      border-radius:999px; background:#f4f6f8; border:1px solid rgba(0,0,0,.06);
-    }
-    .chip-swatch{ width:14px; height:14px; border-radius:3px; display:inline-block; }
-
-    .days-grid{
-      display:grid; gap:1.25rem;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    }
-    .day-card{
-      border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:1rem 1rem 0.5rem;
-      box-shadow:0 2px 14px rgba(0,0,0,.04); background:#fff;
-    }
-    .day-card h3{ margin:.25rem 0 .75rem; font-size:1.25rem; }
-    .session{
-      display:grid; grid-template-columns:115px 1fr; gap:.75rem;
-      padding:.6rem .6rem; border-radius:10px; margin:.5rem 0;
-      border:1px dashed rgba(0,0,0,.06); background:#fafbfc;
-    }
-    .time{ font-weight:600; color:#334155; }
-    .badge{
-      display:inline-block; padding:.15rem .5rem; margin:0 .25rem .25rem 0;
-      border-radius:999px; font-size:.85rem; line-height:1.4; color:#fff;
-      white-space:nowrap;
+    .wrapper.schedule-wrap {
+      padding-top: 0.75rem;
+      margin-top: 0;
+      font-size: 1.05rem;
     }
 
-    /* Badge color helpers */
-    .b-keynote{background:var(--clr-keynote); color:#1c1600;font-size: 1.05rem;}
-    .b-registration{background:var(--clr-registration);font-size: 1.05rem;}
-    .b-tea{background:var(--clr-tea);font-size: 1.05rem;}
-    .b-lunch{background:var(--clr-lunch); color:#0b3d0b;font-size: 1.05rem;}
-    .b-panel{background:var(--clr-panel);font-size: 1.05rem;}
-    .b-women{background:var(--clr-women);font-size: 1.05rem;}
-    .b-banquet{background:var(--clr-banquet);font-size: 1.05rem;}
-    .b-validatory{background:var(--clr-validatory);font-size: 1.05rem;}
+    /* TABLE LAYOUT – PDF-style */
 
-    .b-sab{background:var(--clr-sab);font-size: 1.05rem;}
-    .b-ers{background:var(--clr-ers);font-size: 1.05rem;}
-    .b-ioth{background:var(--clr-ioth);font-size: 1.05rem;}
-    .b-nvs{background:var(--clr-nvs);font-size: 1.05rem;}
-    .b-sip{background:var(--clr-sip);font-size: 1.05rem;}
-    .b-csn{background:var(--clr-csn);font-size: 1.05rem;}
-    .b-srf{background:var(--clr-srf);font-size: 1.05rem;}
-    .b-rds{background:var(--clr-rds);font-size: 1.05rem;}
-    .b-special{background:var(--clr-special);font-size: 1.05rem;}
-    .badge + .badge{ margin-left:.25rem; }
-    .session-notes{ font-size:.9rem; color:#596579;font-size: 1.05rem; }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto 2rem auto;
+      font-size: 1.15rem; /* larger font */
+      text-align: center; /* default center */
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid #555;
+      padding: 6px 8px;
+      vertical-align: top;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .schedule-table .header-row-1 {
+      background: #ffe600;         /* yellow band */
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .schedule-table .header-row-2 {
+      background: #e0e0e0;         /* light gray */
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .schedule-table .day-row {
+      background: #c62828;         /* red band */
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .schedule-table .time-header {
+      background: #f5f5f5;
+      font-weight: bold;
+      text-align: center;
+      width: 18%;
+      white-space: nowrap;
+    }
+
+    .schedule-table .room-header {
+      background: #f5f5f5;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .schedule-table .time-cell {
+      white-space: nowrap;
+      width: 18%;
+      text-align: left;  /* match PDF: time left, others centered */
+    }
+
+    .schedule-table .room-cell {
+      width: 41%;
+    }
+
+    .schedule-table .session-title {
+      font-weight: bold;
+    }
+
+    .schedule-table .paper-list {
+      margin-top: 2px;
+      display: block;
+    }
+
+    /* COLOR / FONT STYLES TO MATCH PDF */
+
+    .blue-italic {
+      color: #0000cc;
+      font-style: italic;
+    }
+
+    .keynote-label {
+      font-weight: bold;
+      color: #008000;
+    }
+
+    .keynote-speaker {
+      color: #008000;
+      font-style: italic;
+    }
+    .keynote-title{
+      color: purple;
+
+    }
   </style>
 </head>
 
@@ -199,30 +165,22 @@
             </ul>
           </li>
           <li>
-            <a href="#">Authors Information</a>
-            <ul>
-              <li><a href="important-dates.html">Important Dates</a></li>
-              <li><a href="manuscript-information.html">Initial Manuscript Information</a></li>
-              <li><a href="pdf-express.html">PDF Express Instructions</a></li>
-              <li><a href="camera-ready.html">Final Camera-ready Submission Instructions</a></li>
-              <li><a href="submission-link.html">Final Camera-ready Submission Link</a></li>
-            </ul>
-          </li>
-          <li>
             <a href="call-for-contributions.html">Call for Contributions</a>
             <ul>
               <li><a href="cfp.html">Call for Papers</a></li>
               <li><a href="cfp-ss.html">Call for Special Sessions</a></li>
               <li><a href="cfp-rds.html">Call for Papers RDS</a></li>
               <li><a href="cfp-srf.html">Call for Papers SRF</a></li>
-              <li><a href="cfp-pct.html">Call for Pre-Conference Tutorials (PCT)</a></li><li><a href="call-for-dc.html">Call for Design Contest</a></li>
+              <li><a href="cfp-pct.html">Call for Pre-Conference Tutorials (PCT)</a></li>
+              <li><a href="call-for-dc.html">Call for Design Contest</a></li>
             </ul>
           </li>
           <li>
             <a href="#">Registration</a>
             <ul>
               <li><a href="register.html">Register</a></li>
-              <li><a href="student-support-grants.html">Student Support Grants</a></li><li><a href="faculty-support-grants.html">Faculty Support Grants</a></li>
+              <li><a href="student-support-grants.html">Student Support Grants</a></li>
+              <li><a href="faculty-support-grants.html">Faculty Support Grants</a></li>
             </ul>
           </li>
           <li>
@@ -277,208 +235,304 @@
     <!-- Program Schedule Content -->
     <section class="wrapper schedule-wrap">
       <div class="container">
-        <!-- <div class="schedule-legend">
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-registration)"></span>Registration</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-keynote)"></span>Keynote</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-tea)"></span>Tea</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-lunch)"></span>Lunch + Posters</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-panel)"></span>Panel</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-women)"></span>WIE Panel</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-banquet)"></span>Banquet</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-validatory)"></span>Valedictory</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-sab)"></span>SAB</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-ers)"></span>ERS</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-ioth)"></span>IoTH</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-nvs)"></span>NVS</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-sip)"></span>SIP</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-csn)"></span>CSN</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-srf)"></span>SRF</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-rds)"></span>RDS</span>
-          <span class="legend-chip"><span class="chip-swatch" style="background:var(--clr-special)"></span>Special Session</span>
-        </div> -->
 
-        <div class="days-grid">
+        <table class="schedule-table">
+          <!-- Top title rows -->
+          <tr>
+            <td class="header-row-1" colspan="3">
+              Program for 2025 IEEE International Symposium on Smart Electronic Systems (iSES)
+            </td>
+          </tr>
+          <tr>
+            <td class="header-row-2" colspan="3">Brief Program Schedule Day wise</td>
+          </tr>
 
-          <!-- Day 1 -->
-          <article class="day-card">
-            <h3>15 Dec 2025 (Monday)</h3>
+          <!-- Generic Time header for PCT days -->
+          <tr>
+            <th class="time-header">Time</th>
+            <th class="room-header" colspan="2">&nbsp;</th>
+          </tr>
 
-            <div class="session">
-              <div class="time">09:00–09:30</div>
-              <div><span class="badge b-registration">Registration</span></div>
-            </div>
+          <!-- Saturday PCT -->
+          <tr>
+            <td class="day-row" colspan="3">
+              Saturday, December 13, 2025 (Pre-Conference Tutorial Day1)
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">10:00 am-12:00 noon</td>
+            <td class="room-cell" colspan="2">PCT-1</td>
+          </tr>
+          <tr>
+            <td class="time-cell">2.00 pm -4.00 pm</td>
+            <td class="room-cell" colspan="2">PCT-2</td>
+          </tr>
 
-            <div class="session">
-              <div class="time">09:30–10:30</div>
-              <div><span class="badge b-keynote">Inaugural Session</span></div>
-            </div>
+          <!-- Sunday PCT -->
+          <tr>
+            <td class="day-row" colspan="3">
+              Sunday, December 14, 2025 Pre-Conference Tutorial Day2)
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">10:00 am-12: 00 noon</td>
+            <td class="room-cell" colspan="2">PCT-3</td>
+          </tr>
+          <tr>
+            <td class="time-cell">2:00 pm-04:00 pm</td>
+            <td class="room-cell" colspan="2">PCT-4</td>
+          </tr>
 
-            <div class="session">
-              <div class="time">10:30–11:00</div>
-              <div><span class="badge b-tea">Tea</span></div>
-            </div>
+          <!-- Monday -->
+          <tr>
+            <td class="day-row" colspan="3">Monday, December 15, 2025</td>
+          </tr>
+          <tr>
+            <th class="time-header">Time</th>
+            <th class="room-header">Room-1</th>
+            <th class="room-header">Room-2</th>
+          </tr>
+          <tr>
+            <td class="time-cell">08:30 am-9:30 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="blue-italic">Registration Process</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">9:30 am-11:00 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="blue-italic">IEEE-iSES 2021 Inauguration and Welcome</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">11:00 am-12:00 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote-1:</span>
+              <span class="keynote-speaker">&nbsp;Gaurav Jalan, Marvell India</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">12:00 am-1:00 pm</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote-2:</span>
+              <span class="keynote-speaker">&nbsp;Rajneesh Rathi. Marvell India</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">01:00 pm-02:00 pm</td>
+            <td class="room-cell" colspan="2">
+              Networking:
+              <span class="blue-italic">Lunch Break</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">02:00 pm-03:00 pm</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote 3:</span>
+              <span class="keynote-speaker">&nbsp;Rohit Gupta, Qualcomm</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">03:00 pm-04:30 pm</td>
+            <td class="room-cell">
+              <span class="session-title">Session1A:   SAB-1 (6)</span><br>
+              <span class="paper-list">114, 134, 168, 201,210, 230</span>
+            </td>
+            <td class="room-cell">
+              <span class="session-title">Session-3A: SIP 1 (6)</span><br>
+              <span class="paper-list">93, 123, 131, 171, 234, 236</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">4.30 pm-6.00 pm</td>
+            <td class="room-cell">
+              <span class="session-title">Session 2A: SAB-2 (6)</span><br>
+              <span class="paper-list">232, 274, 83, 96, 226, 269</span>
+            </td>
+            <td class="room-cell">
+              <span class="session-title">Session-4A:  SIP 2(6)</span><br>
+              <span class="paper-list">237, 239, 164, 279, 282, 286</span>
+            </td>
+          </tr>
 
-            <div class="session">
-              <div class="time">11:00–12:00</div>
-              <div><span class="badge b-keynote">Keynote Session-1</span></div>
-            </div>
+          <!-- Tuesday -->
+          <tr>
+            <td class="day-row" colspan="3">Tuesday, December 16, 2025</td>
+          </tr>
+          <tr>
+            <th class="time-header">Time</th>
+            <th class="room-header">Room-1</th>
+            <th class="room-header">Room-2</th>
+          </tr>
+          <tr>
+            <td class="time-cell">09:00 am-09:30 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="blue-italic">Registration Process</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">09:30 am-10:30 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote-4:</span>
+              <span class="keynote-speaker">&nbsp;Nidhi Chaturvedi</span><br>
+              <span class="keynote-title">
+                Wide and Ultra wide bandgap semiconductors for Electric Vehicle
+              </span><br>
+              <span class="paper-list">
+                Chief Scientist at CSIR-CEERI, Pilani, Semiconductor Sensors and
+              </span><br>
+              <span class="paper-list">Microsystem Group</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">10:30 am-11:30 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote-5:</span>
+              <span class="keynote-speaker">&nbsp;Rajesh Kumar Tiwari</span><br>
+              <span class="paper-list">Director of Engineering Qualcomm India</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">11:30 pm-1:00 pm</td>
+            <td class="room-cell">
+              <span class="session-title">Session-1B:  IoTH-1 (6)</span><br>
+              <span class="paper-list">89, 132, 148, 151, 152, 162</span>
+            </td>
+            <td class="room-cell">
+              <span class="session-title">Session-3B:  ERS-1(6)</span><br>
+              <span class="paper-list">94,110, 113, 115, 116, 135</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">01:00 pm-02:00 pm</td>
+            <td class="room-cell" colspan="2">
+              Networking:
+              <span class="blue-italic">Lunch Break</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">02:00 pm-03:00 pm</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote 6:</span><br>
+              <span class="keynote-speaker">Mani Madhukar</span><br>
+              <span class="paper-list">IBM Research India</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">3.00 pm-4.00 pm</td>
+            <td class="room-cell" colspan="2">
+              <span class="blue-italic">WIE: Women in Engineering Panel Discussion</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">04:00 pm-06:00 pm</td>
+            <td class="room-cell">
+              <span class="session-title">Session 2B: IoTH-2 (6)</span><br>
+              <span class="paper-list">167, 205, 218, 187, 206, 264</span>
+            </td>
+            <td class="room-cell">
+              <span class="session-title">Session-4B   ERS-2 (4)</span><br>
+              <span class="paper-list">138, 142, 147, 211</span><br>
+              <span class="session-title">SS: Converge X (4)</span><br>
+              <span class="paper-list">257, 272, 287, 289</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">06:30 pm-09:30 pm</td>
+            <td class="room-cell" colspan="2">
+              Networking:
+              <span class="blue-italic">Banquet Dinner</span>
+            </td>
+          </tr>
 
-            <div class="session">
-              <div class="time">12:00–13:30</div>
-              <div>
-                <span class="badge b-sab">SAB Track-1</span>
-                <span class="badge b-ioth">IoTH Track-1</span>
-                <span class="badge b-nvs">NVS Track-1</span>
-              </div>
-            </div>
+          <!-- Wednesday -->
+          <tr>
+            <td class="day-row" colspan="3">Wednesday, December 17, 2025</td>
+          </tr>
+          <tr>
+            <th class="time-header">Time</th>
+            <th class="room-header">Room-1</th>
+            <th class="room-header">Room-2</th>
+          </tr>
+          <tr>
+            <td class="time-cell">08:30 am-09:00 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="blue-italic">Registration Process</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">09:30 am-10:30 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote-7:</span>
+              <span class="keynote-speaker">&nbsp;Nirupam SD</span><br>
+              <span class="paper-list">
+                Chief Technology Officer (CTO) - Data Fusion, Internet of Things (IoT) and
+              </span><br>
+              <span class="paper-list">Artificial Intelligence, Singapore</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">10:30 am-11:30 am</td>
+            <td class="room-cell" colspan="2">
+              <span class="keynote-label">Keynote-8:</span>
+              <span class="keynote-speaker">&nbsp;Deepak Agarwal</span><br>
+              <span class="paper-list">Vice President - SoC Engineering Hrdwyr, Bengaluru</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">11:30 pm-01:00 pm</td>
+            <td class="room-cell">
+              <span class="session-title">Session-5A:  Special Session SdB (6)</span><br>
+              <span class="paper-list">117, 119, 121, 161,208, 255</span>
+            </td>
+            <td class="room-cell">
+              <span class="session-title">Session-5B:   NVS (5)</span><br>
+              <span class="paper-list">70, 72, 193, 227, 229</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">1.00 pm -2.00 pm</td>
+            <td class="room-cell" colspan="2">
+              Networking:
+              <span class="blue-italic">Lunch Break</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">2.00 pm -3.00 pm</td>
+            <td class="room-cell">
+              <span class="session-title">Session 6A: Secure Embedded AI (4)</span><br>
+              <span class="paper-list">172, 186, 243, 244</span>
+            </td>
+            <td class="room-cell">
+              <span class="session-title">Session 6B: RDS (6)</span><br>
+              <span class="paper-list">146, 233, 107, 163, 179, 207</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">3.00 pm -4.00 pm</td>
+            <td class="room-cell">
+              <span class="session-title">Session 7A: Special Session Smart Sensors(4)</span><br>
+              <span class="paper-list">260, 263, 275, 276</span>
+            </td>
+            <td class="room-cell">
+              <span class="session-title">Session 7B: RDS (5)</span><br>
+              <span class="paper-list">150, 195, 247, 259, 262</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">4.00 pm- 5.00 pm</td>
+            <td class="room-cell" colspan="2">
+              <span class="session-title">Panel Discussion -1</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="time-cell">05:00 pm-05:03 pm</td>
+            <td class="room-cell" colspan="2">
+              Closing Ceremony: IEEE-iSES 2021 Closing and Award
+            </td>
+          </tr>
+        </table>
 
-            <div class="session">
-              <div class="time">13:30–14:30</div>
-              <div><span class="badge b-lunch">Lunch Break + Poster</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">14:30–15:30</div>
-              <div><span class="badge b-keynote">Keynote Session-2</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">15:30–17:00</div>
-              <div>
-                <span class="badge b-sab">SAB Track-2</span>
-                <span class="badge b-ioth">IoTH Track-2</span>
-                <span class="badge b-nvs">NVS Track-2</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">17:00–18:00</div>
-              <div><span class="badge b-panel">Panel Discussion</span></div>
-            </div>
-          </article>
-
-          <!-- Day 2 -->
-          <article class="day-card">
-            <h3>16 Dec 2025 (Tuesday)</h3>
-
-            <div class="session">
-              <div class="time">09:00–09:30</div>
-              <div><span class="badge b-registration">Registration</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">09:30–10:30</div>
-              <div><span class="badge b-keynote">Keynote Session-3</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">10:30–12:00</div>
-              <div>
-                <span class="badge b-sab">SAB Track-3</span>
-                <span class="badge b-ioth">IoTH Track-3</span>
-                <span class="badge b-ers">ERS Track-1</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">12:00–13:30</div>
-              <div>
-                <span class="badge b-rds">RDS Session</span>
-                <span class="badge b-srf">SRF Session</span>
-                <span class="badge b-ers"> ERS Track-2</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">13:30–14:30</div>
-              <div><span class="badge b-lunch">Lunch Break + Poster</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">14:30–15:30</div>
-              <div><span class="badge b-keynote">Keynote Session-4</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">15:30–17:00</div>
-              <div>
-                <span class="badge b-sip">SIP Track</span>
-                <span class="badge b-csn">CSN Track</span>
-				<span class="badge b-srf">SRF/RDS Session</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">17:00–18:00</div>
-              <div><span class="badge b-women">Women Panel Discussion</span></div>
-            </div>
-			<div class="session">
-              <div class="time">18:30–21:30</div>
-              <div><span class="badge b-banquet">Banquet Dinner</span></div>
-            </div>
-          </article>
-
-          <!-- Day 3 -->
-          <article class="day-card">
-            <h3>17 Dec 2025 (Wednesday)</h3>
-
-            <div class="session">
-              <div class="time">09:00–09:30</div>
-              <div><span class="badge b-registration">Registration</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">09:30–10:30</div>
-              <div><span class="badge b-keynote">Keynote Session-5</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">10:30–12:00</div>
-              <div>
-                <span class="badge b-special">Special Session-1</span>
-                <span class="badge b-special">Special Session-2</span>
-				<span class="badge b-special">Special Session-3</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">12:00–13:30</div>
-              <div>
-                <span class="badge b-special">Special Session-4</span>
-                <span class="badge b-special">Special Session-5</span>
-                <span class="badge b-special">Special Session-6</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">13:30–14:30</div>
-              <div><span class="badge b-lunch">Lunch Break + Poster</span></div>
-            </div>
-
-            <div class="session">
-              <div class="time">14:30–15:30</div>
-              <div>
-                <span class="badge b-keynote">Keynote Session-6</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">15:30–17:00</div>
-              <div>
-				<span class="badge b-special">Special Session-7</span>
-                <span class="badge b-special">Special Session-8</span>
-                <span class="badge b-special">Special Session-9</span>
-              </div>
-            </div>
-
-            <div class="session">
-              <div class="time">17:00–18:00</div>
-              <div><span class="badge b-validatory">Valedictory Session</span></div>
-            </div>
-          </article>
-
-        </div>
-        
       </div>
     </section>
 
