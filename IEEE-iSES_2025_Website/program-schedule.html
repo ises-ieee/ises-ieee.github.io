@@ -96,6 +96,7 @@
     .schedule-table .paper-list {
       margin-top: 2px;
       display: block;
+      font-weight: normal;
     }
 
     /* COLOR / FONT STYLES TO MATCH PDF */
@@ -116,7 +117,6 @@
     }
     .keynote-title{
       color: purple;
-
     }
   </style>
 </head>
@@ -250,37 +250,69 @@
           <!-- Generic Time header for PCT days -->
           <tr>
             <th class="time-header">Time</th>
-            <th class="room-header" colspan="2">&nbsp;</th>
+            <th class="room-header" colspan="2">Topic</th>
           </tr>
 
           <!-- Saturday PCT -->
           <tr>
             <td class="day-row" colspan="3">
-              Saturday, December 13, 2025 (Pre-Conference Tutorial Day1)
+              Saturday, December 13, 2025 (Pre-Conference Tutorial Day 1)
             </td>
           </tr>
           <tr>
             <td class="time-cell">10:00 am-12:00 noon</td>
-            <td class="room-cell" colspan="2">PCT-1</td>
+            <td class="room-cell" colspan="2">
+              <span class="session-title">PCT-1:</span>
+              <span class="paper-list">
+                DFT implementation at RTL stage : Methodology to enhance SoC Testability and reduce Time-to-Market
+              </span>
+              <span class="paper-list">
+                <span class="blue-italic">Jatin Chakravarti and Chintan Panchal – eInfochips.India.</span>
+              </span>
+            </td>
           </tr>
           <tr>
             <td class="time-cell">2.00 pm -4.00 pm</td>
-            <td class="room-cell" colspan="2">PCT-2</td>
+            <td class="room-cell" colspan="2">
+              <span class="session-title">PCT-2:</span>
+              <span class="paper-list">
+                Model-Based Hardware-Software Co-Synthesis of Embedded Systems
+              </span>
+              <span class="paper-list">
+                <span class="blue-italic">
+                  Prof. Subir Kumar Roy – IIIT Bangalore and Prof. Kusum Lata – LNMIIT Jaipur
+                </span>
+              </span>
+            </td>
           </tr>
 
           <!-- Sunday PCT -->
           <tr>
             <td class="day-row" colspan="3">
-              Sunday, December 14, 2025 Pre-Conference Tutorial Day2)
+              Sunday, December 14, 2025 (Pre-Conference Tutorial Day 2)
             </td>
           </tr>
           <tr>
             <td class="time-cell">10:00 am-12: 00 noon</td>
-            <td class="room-cell" colspan="2">PCT-3</td>
+            <td class="room-cell" colspan="2">
+              <span class="session-title">PCT-3:</span>
+              <span class="paper-list">
+                Demystifying Static Timing Analysis: From Fundamentals to Advanced Practices
+              </span>
+              <span class="paper-list">
+                <span class="blue-italic">Prof. Sneh Saurabh – IIIT Delhi</span>
+              </span>
+            </td>
           </tr>
           <tr>
             <td class="time-cell">2:00 pm-04:00 pm</td>
-            <td class="room-cell" colspan="2">PCT-4</td>
+            <td class="room-cell" colspan="2">
+              <span class="session-title">PCT-4:</span>
+              <span class="paper-list">High Speed Networks</span>
+              <span class="paper-list">
+                <span class="blue-italic">Bibhay Ranjan – NVidia India</span>
+              </span>
+            </td>
           </tr>
 
           <!-- Monday -->
@@ -301,7 +333,7 @@
           <tr>
             <td class="time-cell">9:30 am-11:00 am</td>
             <td class="room-cell" colspan="2">
-              <span class="blue-italic">IEEE-iSES 2021 Inauguration and Welcome</span>
+              <span class="blue-italic">IEEE-iSES 2025 Inauguration and Welcome</span>
             </td>
           </tr>
           <tr>
@@ -337,21 +369,50 @@
             <td class="room-cell">
               <span class="session-title">Session1A:   SAB-1 (6)</span><br>
               <span class="paper-list">114, 134, 168, 201,210, 230</span>
+
+              <span class="paper-list">114- High-Performance MAGIC-based Subtractor and Max Pooling for Neural Networks.</span>
+              <span class="paper-list">134- MAGIC-based Logarithmic Circuit and Lead One Detector Circuit for In-Memory Computing Using Memristors</span>
+              <span class="paper-list">168- RISC-V SoC Compatible ViT Accelerator for Malware Detection</span>
+              <span class="paper-list">201- Hybrid YOLO-ResNet Framework for Occlusion-Aware Parking Slot Occupancy Detection</span>
+              <span class="paper-list">210- Multimodal Attention-based Approach for Movie Trailer Genre Detection</span>
+              <span class="paper-list">230- Compensation of Kerr Nonlinearity in Dual Polarization 16-QAM Coherent Optical Fiber Systems Leveraging Transformer Equalizer</span>
             </td>
             <td class="room-cell">
-              <span class="session-title">Session-3A: SIP 1 (6)</span><br>
-              <span class="paper-list">93, 123, 131, 171, 234, 236</span>
+              <span class="session-title">Session-1B: IoTH-1 (6)</span><br>
+              <span class="paper-list">89, 132, 148, 151, 152, 162</span>
+
+              <span class="paper-list">89-A Spiking U-NET Architecture for Segmentation of ssTEM Images of Larva Ventral Nerve Cord of Drosophila Species</span>
+              <span class="paper-list">132-Predicting Left Ventricular Hypertrophy using Electrocardiogram and Demographic Feature based on Este's Criteria</span>
+              <span class="paper-list">148-Predicting Left Ventricular Hypertrophy using Electrocardiogram and Demographic Feature based on Este's Criteria</span>
+              <span class="paper-list">151-GaitTracker: A wearable device for analysing gait patterns</span>
+              <span class="paper-list">152-iGLU 4.2: A Non-invasive Intelligent System for Diabetes Likelihood Prediction using Glucose Values and Body Parameters</span>
+              <span class="paper-list">162-Real-Time Brain Tumor Detection on Edge: Comparative Analysis of CNN Models Deployed on Coral Dev Board</span>
             </td>
           </tr>
+
           <tr>
             <td class="time-cell">4.30 pm-6.00 pm</td>
             <td class="room-cell">
               <span class="session-title">Session 2A: SAB-2 (6)</span><br>
-              <span class="paper-list">232, 274, 83, 96, 226, 269</span>
+              <span class="paper-list">72, 96, 226, 232, 269, 274</span>
+
+              <span class="paper-list">72-Analog IC Design Automation for Automotive Applications - A Review</span>
+              <span class="paper-list">96-AI TECH: To Predict Future Pandemics</span>
+              <span class="paper-list">226-BreathSense: Breathing Rate Estimation from Microphone-Acquired Audio Using Adaptive Filtering and Machine Learning Framework</span>
+              <span class="paper-list">232-G-SHIELD: Hardware Acceleration for Defending CNNs Against Adversarial Attacks</span>
+              <span class="paper-list">269-Recent Developments in RFID Reader Antennas: A Survey</span>
+              <span class="paper-list">274-DSCC-GCN: A Dominating-Set and Coefficient-Guided Framework for Autism Spectrum Disorder Identification and Detection</span>
             </td>
             <td class="room-cell">
-              <span class="session-title">Session-4A:  SIP 2(6)</span><br>
-              <span class="paper-list">237, 239, 164, 279, 282, 286</span>
+              <span class="session-title">Session 2B: IoTH-2 (6)</span><br>
+              <span class="paper-list">167, 187, 205, 206, 218, 264</span>
+
+              <span class="paper-list">167-A Distributed Multi-State LED Lighting Control System for Energy Optimization in Academic Campuses</span>
+              <span class="paper-list">187-Enhancing IoT Security Through Image Steganography: A Comparative Study of LSB, DCT, and DWT Approaches</span>
+              <span class="paper-list">205-Localization of Myocardial Infarction using Empirical Fourier Decomposition and Support Vector Machine Framework</span>
+              <span class="paper-list">206-Yoga Pose Recognition using Light-weight models: MobileNet, EfficientNet and ANN on Edge-AI</span>
+              <span class="paper-list">218-A Lightweight Dual-Residual CNN for Accurate Human Motion Classification Using Multi-Sensor IMU Data</span>
+              <span class="paper-list">264-Design and Implementation of a LoRa-Based Wireless Data Acquisition System for Load Cells</span>
             </td>
           </tr>
 
@@ -365,42 +426,63 @@
             <th class="room-header">Room-2</th>
           </tr>
           <tr>
-            <td class="time-cell">09:00 am-09:30 am</td>
+            <td class="time-cell">08:30 am-09:30 am</td>
             <td class="room-cell" colspan="2">
-              <span class="blue-italic">Registration Process</span>
+              <span class="blue-italic">Refreshment and R egistration Process</span>
             </td>
           </tr>
           <tr>
             <td class="time-cell">09:30 am-10:30 am</td>
             <td class="room-cell" colspan="2">
-              <span class="keynote-label">Keynote-4:</span>
-              <span class="keynote-speaker">&nbsp;Nidhi Chaturvedi</span><br>
+              <span class="keynote-label">Keynote-4:</span><br>
               <span class="keynote-title">
                 Wide and Ultra wide bandgap semiconductors for Electric Vehicle
               </span><br>
               <span class="paper-list">
-                Chief Scientist at CSIR-CEERI, Pilani, Semiconductor Sensors and
-              </span><br>
-              <span class="paper-list">Microsystem Group</span>
+                <span class="keynote-speaker">
+                  by Nidhi Chaturvedi, Chief Scientist at CSIR-CEERI, Pilani, Semiconductor Sensors and Microsystem Group
+                </span>
+              </span>
             </td>
           </tr>
           <tr>
             <td class="time-cell">10:30 am-11:30 am</td>
             <td class="room-cell" colspan="2">
-              <span class="keynote-label">Keynote-5:</span>
-              <span class="keynote-speaker">&nbsp;Rajesh Kumar Tiwari</span><br>
-              <span class="paper-list">Director of Engineering Qualcomm India</span>
+              <span class="keynote-label">Keynote-5:</span><br>
+              <span class="keynote-title">
+                Built-In-Self-Test – Redefining Functional Safety in Automotive Designs.
+              </span><br>
+              <span class="paper-list">
+                <span class="keynote-speaker">
+                  by Rajesh Kumar Tiwari, Director of Engineering Qualcomm India
+                </span>
+              </span>
             </td>
           </tr>
           <tr>
             <td class="time-cell">11:30 pm-1:00 pm</td>
             <td class="room-cell">
-              <span class="session-title">Session-1B:  IoTH-1 (6)</span><br>
-              <span class="paper-list">89, 132, 148, 151, 152, 162</span>
+              <span class="session-title">Session-3A: SIP 1 (6)</span><br>
+              <span class="paper-list">93, 123, 131, 171, 234, 236</span>
+
+              <span class="paper-list">93-Timer-driven HLS Trojan attack on Medical System Hardware</span>
+              <span class="paper-list">123-Embedding Steganography Digest using Shannon's Decomposition for Hardware Security against False IP Ownership Attack</span>
+              <span class="paper-list">131-Dynamic Detection of Rogue Access Points</span>
+              <span class="paper-list">171-On the Feasibility of DeFi Mining on IoT Devices</span>
+              <span class="paper-list">234-Low-Power Design of Number Theoretic Transform (NTT)</span>
+              <span class="paper-list">236-Enforcing Security in IJTAG-Enabled SoCs through Access Management Mechanism</span>
             </td>
+
             <td class="room-cell">
               <span class="session-title">Session-3B:  ERS-1(6)</span><br>
               <span class="paper-list">94,110, 113, 115, 116, 135</span>
+
+              <span class="paper-list">94-ColdStore: An STT sibling-cache architecture for energy-efficient intermittent computing systems</span>
+              <span class="paper-list">110-A High-Gain Amplifier Using Oxide TFT Technology</span>
+              <span class="paper-list">113-Digitally Controlled CMOS Schmitt Trigger with Tunable Hysteresis for Low-Power Applications</span>
+              <span class="paper-list">115-Energy Efficient Posit Number Based 16-Bit Approximate Computing Units</span>
+              <span class="paper-list">116-OVIS: Optimizing Verification of Integrity in Secure Non-Volatile Memories</span>
+              <span class="paper-list">135-Design and Integration of High-Efficiency Full Adder Design using Pass Transistor Logic</span>
             </td>
           </tr>
           <tr>
@@ -427,14 +509,35 @@
           <tr>
             <td class="time-cell">04:00 pm-06:00 pm</td>
             <td class="room-cell">
-              <span class="session-title">Session 2B: IoTH-2 (6)</span><br>
-              <span class="paper-list">167, 205, 218, 187, 206, 264</span>
+              <span class="session-title">Session-4A: SIP 2(6)</span><br>
+              <span class="paper-list">164, 237, 239, 279, 282, 286</span>
+
+              <span class="paper-list">164-Profiling the Energy Impact of Fuzzing for Constrained Environments</span>
+              <span class="paper-list">237- Constraints Aware Exploration for Quantifying Obfuscation Robustness</span>
+              <span class="paper-list">239- Towards Improved Performance Metrics for Karatsuba Multiplier and Number Theoretic Transform (NTT)-based Polynomial Arithmetic Multiplier for PQC Primitives</span>
+              <span class="paper-list">279- Federated Learning-based Secure Access Control and Anomaly Detection in IoMT Systems</span>
+              <span class="paper-list">282- AI-Powered Intrusion Detection Systems for IoT Devices with Risk Scoring and Automated Response</span>
+              <span class="paper-list">286-Modeling and Simulation of IoT Device Behavior Under Remote Code Execution Attacks Using Stochastic Petrinets</span>
             </td>
+
             <td class="room-cell">
-              <span class="session-title">Session-4B   ERS-2 (4)</span><br>
-              <span class="paper-list">138, 142, 147, 211</span><br>
-              <span class="session-title">SS: Converge X (4)</span><br>
-              <span class="paper-list">257, 272, 287, 289</span>
+              <span class="session-title">Session-4B : ERS-2 (4)</span><br>
+              <span class="paper-list">138, 142, 147, 211</span>
+
+              <span class="paper-list">138-Design and Validation of a Low-Pass FIR Filter for Analog Signal Conditioning in Energy Monitoring Systems</span>
+              <span class="paper-list">142-Design and analysis of a GHz PLL using GDI and pass transistor based PFD with a lock time of 520 ns</span>
+              <span class="paper-list">147-Design of Wideband, Low Phase Noise 3-Stage and 5-Stage Differential Ring VCOs for Wireless Communication Systems</span>
+              <span class="paper-list">211-Light-weight Adaptive Dual-Threshold based Checkpointing for Intermittent Computing Systems</span>
+
+              <span class="session-title">SS: Converge X (6)</span><br>
+              <span class="paper-list">257, 266, 284, 272, 287, 289</span>
+
+              <span class="paper-list">257-Study of Deep Learning based Methodologies for Predicting Eye Diseases</span>
+              <span class="paper-list">266- Temporal-Spatial Feature Learning in EEG Signals Using Attention-Enhanced Residual Networks</span>
+              <span class="paper-list">272-Cyber-Resilient Wide-Area Damping Control for Low-Frequency Oscillations in Power Systems</span>
+              <span class="paper-list">284-Adaptive Task Mapping in NoC Systems Using Salp Swarm and Markov Decision Processes</span>
+              <span class="paper-list">287-Portability in Neurodiagnostics: Feasibility of One- and Two-Channel EEG Systems for Accurate Brain Condition Monitoring</span>
+              <span class="paper-list">289-Integrating Machine Learning and Deep Learning for Early disease detection using Medical Images</span>
             </td>
           </tr>
           <tr>
@@ -457,26 +560,30 @@
           <tr>
             <td class="time-cell">08:30 am-09:00 am</td>
             <td class="room-cell" colspan="2">
-              <span class="blue-italic">Registration Process</span>
+              <span class="blue-italic">Refreshment and Registration Process</span>
             </td>
           </tr>
           <tr>
             <td class="time-cell">09:30 am-10:30 am</td>
             <td class="room-cell" colspan="2">
-              <span class="keynote-label">Keynote-7:</span>
-              <span class="keynote-speaker">&nbsp;Nirupam SD</span><br>
-              <span class="paper-list">
-                Chief Technology Officer (CTO) - Data Fusion, Internet of Things (IoT) and
+              <span class="keynote-label">Keynote-7:</span><br>
+              <span class="keynote-title">
+                Combinatorial Digital Innovation: A Strategic Blueprint
               </span><br>
-              <span class="paper-list">Artificial Intelligence, Singapore</span>
+              <span class="paper-list">
+                <span class="keynote-speaker">
+                  by Nirupam SD, Chief Technology Officer (CTO) - Data Fusion, Internet of Things (IoT) and Artificial Intelligence, Singapore
+                </span>
+              </span>
             </td>
           </tr>
           <tr>
             <td class="time-cell">10:30 am-11:30 am</td>
             <td class="room-cell" colspan="2">
-              <span class="keynote-label">Keynote-8:</span>
-              <span class="keynote-speaker">&nbsp;Deepak Agarwal</span><br>
-              <span class="paper-list">Vice President - SoC Engineering Hrdwyr, Bengaluru</span>
+              <span class="keynote-label">Keynote-8:</span><br>
+              <span class="keynote-speaker">
+                Deepak Agarwal, Vice President - SoC Engineering Hrdwyr, Bengaluru
+              </span>
             </td>
           </tr>
           <tr>
@@ -484,10 +591,25 @@
             <td class="room-cell">
               <span class="session-title">Session-5A:  Special Session SdB (6)</span><br>
               <span class="paper-list">117, 119, 121, 161,208, 255</span>
+
+              <span class="paper-list">117-Federated TinyML for Lightweight Anomaly Detection in IoMT Using MQTT-Enabled Edge Deployment</span>
+              <span class="paper-list">119-Secure Command Authentication for Drone Control using ECDSA</span>
+              <span class="paper-list">121- Performance Optimization in AWS Glue: Tuning Techniques and Resource Management</span>
+              <span class="paper-list">161-Scalable AI-Powered Speech Redaction: Evolving from Cloud Pipelines to LLM-Driven Architectures</span>
+              <span class="paper-list">208-Defending Against Adversarial Threats in Federated Learning: A Security Approach with Differential Privacy and Secure Aggregation</span>
+              <span class="paper-list">255-High-Efficiency FPGA Implementations of ASCON-128/128a: A Unified Pipelined Architecture for Authenticated Encryption in Edge Devices</span>
             </td>
+
             <td class="room-cell">
-              <span class="session-title">Session-5B:   NVS (5)</span><br>
-              <span class="paper-list">70, 72, 193, 227, 229</span>
+              <span class="session-title">Session-5B:   NVS (6)</span><br>
+              <span class="paper-list"> 70, 83, 193, 227, 229, 285</span>
+
+              <span class="paper-list">70-SOI Tunnel FET as Optical Sensor in Visible Spectrum Including Interface Trap Charges</span>
+              <span class="paper-list">83-Advanced Memory Repair Using ECC and eFuse</span>
+              <span class="paper-list">193-Composite CMOS–Memristor Circuits for Optimization of Normalized Power and Area of Digital Circuits</span>
+              <span class="paper-list">227-Enhancing Battery Safety and Reliability in Electric Vehicles Using Flex Sensors for Dimensional Monitoring and Thermal Runaway Prevention</span>
+              <span class="paper-list">229-Performance Enhancement of ZnO Thin-Film Transistor through Structural and Contact Material Optimization for Hydrogen Sensing Applications</span>
+              <span class="paper-list">285: Optimized Task Mapping for Network-on-Chip with Dynamic Reallocation Using Bellman-Based Value Iteration</span>
             </td>
           </tr>
           <tr>
@@ -502,10 +624,23 @@
             <td class="room-cell">
               <span class="session-title">Session 6A: Secure Embedded AI (4)</span><br>
               <span class="paper-list">172, 186, 243, 244</span>
+
+              <span class="paper-list">172-AquaBlock: A Distributed Ledger for Efficient Total Dissolved Solids Data in Fisheries in Smart Aquaculture</span>
+              <span class="paper-list">186-A Resilient Federated Learning Framework for LLM Security in Healthcare</span>
+              <span class="paper-list">243-FreshPick: An IoT-Based System for Classifying and Selecting Fresh Fruits for Market Distribution</span>
+              <span class="paper-list">244-AngelRide: An Autonomous Smart Car Seat for Continuous Child Safety with IoMT</span>
             </td>
+
             <td class="room-cell">
-              <span class="session-title">Session 6B: RDS (6)</span><br>
+              <span class="session-title">Session 6B: Research Demo Session (6)</span><br>
               <span class="paper-list">146, 233, 107, 163, 179, 207</span>
+
+              <span class="paper-list">107-Hash-based Predictor for Metadata Overhead Reduction for Memory Compression</span>
+              <span class="paper-list">146-Using inverted PPG with window sampling for heart rate detection in wearable devices</span>
+              <span class="paper-list">163- Fast-Track Functional Verification Framework for Next-Generation IP Cores</span>
+              <span class="paper-list">179- A RISC-V SoC with an Integrated CORDIC Coprocessor for Improved Trigonometric Efficiency</span>
+              <span class="paper-list">207- Exploring Near Field Communication in Vehicular Systems: Application, Challenges and Opportunities</span>
+              <span class="paper-list">233- Hardware Implementation Of Optimized Modular Polynomial Multiplication For Post-Quantum Cryptographic Schemes</span>
             </td>
           </tr>
           <tr>
@@ -513,22 +648,35 @@
             <td class="room-cell">
               <span class="session-title">Session 7A: Special Session Smart Sensors(4)</span><br>
               <span class="paper-list">260, 263, 275, 276</span>
+
+              <span class="paper-list">260-Design of single drive tri-axis MEMS Gyroscope</span>
+              <span class="paper-list">263-Reliability study of MEMS piezoelectric sensing structure</span>
+              <span class="paper-list">275-FEM Modeling and Simulation of PMUT for Rangefinding Applications</span>
+              <span class="paper-list">276-Study of Pyroelectric Detectors based on Lithium Tantalate and Lithium Niobate Using Finite Element Method Simulation</span>
             </td>
+
             <td class="room-cell">
-              <span class="session-title">Session 7B: RDS (5)</span><br>
-              <span class="paper-list">150, 195, 247, 259, 262</span>
+              <span class="session-title">Session 7B: Research Demo Session (6)</span><br>
+              <span class="paper-list">137, 150, 195, 247, 259, 262</span>
+
+              <span class="paper-list">137- Simulation Flight Control Dynamics using Numerical Modeling</span>
+              <span class="paper-list">150-Biowaste-derived Peanut-skin Triboelectric Nanogenerators for Sustainable Energy Harvesting and Smart Sports Supervision</span>
+              <span class="paper-list">195-FPGA implementation of a real-time diabetes classifier using Verilog on the PIMA dataset</span>
+              <span class="paper-list">247-LogProof - Ensuring Integrity and Immutability of Audit Logs Using Blockchain</span>
+              <span class="paper-list">259-Optimized architecture of energy-intent accelerator for the non-neural face recognition on the edge</span>
+              <span class="paper-list">262-ESP32 and MPU6050 Enabled IoT Solution for Human Fall Detection</span>
             </td>
           </tr>
           <tr>
             <td class="time-cell">4.00 pm- 5.00 pm</td>
             <td class="room-cell" colspan="2">
-              <span class="session-title">Panel Discussion -1</span>
+              <span class="session-title">Panel Discussion </span>
             </td>
           </tr>
           <tr>
             <td class="time-cell">05:00 pm-05:03 pm</td>
             <td class="room-cell" colspan="2">
-              Closing Ceremony: IEEE-iSES 2021 Closing and Award
+              Closing Ceremony: IEEE-iSES 2025 Closing and Award
             </td>
           </tr>
         </table>
