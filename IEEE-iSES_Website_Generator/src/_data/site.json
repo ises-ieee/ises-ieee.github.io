@@ -3,5 +3,8 @@
   "year": "2026",
   "tagline": "15-17 December 2026, Goa, India",
   "copyrightYears": "2015 - 2026",
-  "siteBase": "https://ises-ieee.github.io"
+  "siteBase": "https://ises-ieee.github.io",
+  "basePath": "/IEEE_iSES_2026_Website",
+  "pathPrefix": "/IEEE_iSES_2026_Website/",
+  "outputDir": "../IEEE_iSES_2026_Website"
 }

@@ -13,7 +13,7 @@ bodyClass: "homepage is-preload"
       <!-- Main hero card -->
       <div class="card home-hero__main">
         <a class="image featured" href="#">
-          <img class="home-hero__banner" alt="" src="/images/IEEE-iSES-2025_Banner.jpg"/>
+          <img class="home-hero__banner" alt="" src="{{site.basePath}}/images/IEEE-iSES-2025_Banner.jpg"/>
         </a>
 
         <!-- KEEP YOUR INTRO TEXT EXACTLY -->
@@ -42,8 +42,8 @@ bodyClass: "homepage is-preload"
             <a class="btn btn-primary" href="https://cmt3.research.microsoft.com/IEEEiSeS2025" target="_blank" rel="noopener">
               Submission Link
             </a>
-            <a class="btn btn-ghost" href="/important-dates.html">Important Dates</a>
-            <a class="btn btn-ghost" href="/register.html">Registration</a>
+            <a class="btn btn-ghost" href="{{site.basePath}}/important-dates.html">Important Dates</a>
+            <a class="btn btn-ghost" href="{{site.basePath}}/register.html">Registration</a>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ bodyClass: "homepage is-preload"
           <h2 class="card__title">Quick Links</h2>
           <div class="quick-grid">
             {% for q in home.quickLinks %}
-              <a class="quick-item" href="{{ q.href }}">{{ q.label }}</a>
+              <a class="quick-item" href="{{site.basePath}}/{{ q.href }}">{{ q.label }}</a>
             {% endfor %}
           </div>
         </div>
@@ -129,7 +129,7 @@ bodyClass: "homepage is-preload"
       <div class="people-grid">
         {% for p in keynotes %}
           <a class="person-card" href="keynotes.html#{{ p.id }}">
-            <img alt="{{ p.name }}" src="{{ p.photo }}" class="inline-19a6131930"/>
+            <img alt="{{ p.name }}" src="{{site.basePath}}/{{ p.photo }}" class="inline-19a6131930"/>
             <div class="person-card__meta">
               <div class="person-card__name">{{ p.name }}</div>
               {# affiliation is a single string in your JSON; split lines only in CSS/wrap #}
@@ -156,7 +156,7 @@ bodyClass: "homepage is-preload"
             <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.name }}">
               <img class="sponsor-logo"
                    alt="{{ s.name }}"
-                   src="{{ s.logo }}"
+                   src="{{site.basePath}}/{{ s.logo }}"
                    data-placeholder="{{ s.placeholder or s.name }}"/>
             </a>
             <p class="caption"><strong>{{ s.name }}</strong></p>
@@ -173,7 +173,7 @@ bodyClass: "homepage is-preload"
             <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.name }}">
               <img class="sponsor-logo"
                    alt="{{ s.name }}"
-                   src="{{ s.logo }}"
+                   src="{{site.basePath}}/{{ s.logo }}"
                    data-placeholder="{{ s.placeholder or s.name }}"/>
             </a>
             <p class="caption"><strong>{{ s.name }}</strong></p>
@@ -190,7 +190,7 @@ bodyClass: "homepage is-preload"
             <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.name }}">
               <img class="sponsor-logo"
                    alt="{{ s.name }}"
-                   src="{{ s.logo }}"
+                   src="{{site.basePath}}/{{ s.logo }}"
                    data-placeholder="{{ s.placeholder or s.name }}"/>
             </a>
             <p class="caption"><strong>{{ s.name }}</strong></p>

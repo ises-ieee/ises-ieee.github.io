@@ -1,0 +1,40 @@
+(function () {
+
+  // Load from Eleventy JSON data
+  const photos1 = ["/images/venue/Picture1.png","/images/venue/Picture2.png","/images/venue/Picture3.png"];
+  const photos2 = ["/images/venue/Picture4.png","/images/venue/Picture5.png","/images/venue/Picture6.png"];
+
+  function mountSlideshow(containerId, photos, intervalMs = 2500) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+
+    if (!photos || photos.length === 0) {
+      el.innerHTML = "<div class='muted center' style='padding:1rem;'>No photos configured.</div>";
+      return;
+    }
+
+    let idx = 0;
+    const img = document.createElement("img");
+
+    img.className = "photo-img";
+    img.alt = "Venue photo";
+    img.loading = "lazy";
+    img.src = photos[idx];
+
+    el.appendChild(img);
+
+    setInterval(() => {
+      idx = (idx + 1) % photos.length;
+      img.classList.remove("fade-in");
+      void img.offsetWidth;
+      img.src = photos[idx];
+      img.classList.add("fade-in");
+    }, intervalMs);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    mountSlideshow("slideshow-container-1", photos1, 2400);
+    mountSlideshow("slideshow-container-2", photos2, 2700);
+  });
+
+})();

@@ -1,7 +1,8 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/index.html" aria-label="Home">
-      <img src="/images/ieee-ises_logo_2026.png" alt="IEEE-iSES logo">
+    {# ✅ Step-2 fix: use Eleventy `url` filter so `pathPrefix` is applied automatically #}
+    <a class="brand" href="{{ '/index.html' | url }}" aria-label="Home">
+      <img src="{{ '/images/ieee-ises_logo_2026.png' | url }}" alt="IEEE-iSES logo">
       <div class="brand-title">
         <div class="name">{{ site.confName }} {{ site.year }}</div>
         <div class="tag">{{ site.tagline }}</div>
@@ -16,13 +17,37 @@
     {% macro render_items(items) %}
       {% for item in items %}
         <li>
-          <a href="{{ item.url or '#' }}">{{ item.label }}</a>
+          {# ✅ Step-2 fix: run ALL internal links through `| url` (and keep external/mailto/# untouched) #}
+          {% set raw = item.url or '#' %}
+          {% set href = raw %}
+
+          {% if raw != '#'
+            and not raw.startsWith('http')
+            and not raw.startsWith('mailto:')
+            and not raw.startsWith('#')
+          %}
+            {# raw is like "/call-for-contributions.html" #}
+            {% set href = raw | url %}
+          {% endif %}
+
+          <a href="{{ href }}">{{ item.label }}</a>
 
           {# Dynamic submenu: Past Conferences #}
           {% if item.dynamic == "pastConferences" %}
             <ul>
               {% for conf in pastConferences.items %}
-                <li><a href="{{ conf.url }}">{{ conf.name }}</a></li>
+                {% set cRaw = conf.url %}
+                {% set cHref = cRaw %}
+
+                {% if cRaw
+                  and not cRaw.startsWith('http')
+                  and not cRaw.startsWith('mailto:')
+                  and not cRaw.startsWith('#')
+                %}
+                  {% set cHref = cRaw | url %}
+                {% endif %}
+
+                <li><a href="{{ cHref }}">{{ conf.name }}</a></li>
               {% endfor %}
             </ul>
           {% elif item.children and item.children.length %}

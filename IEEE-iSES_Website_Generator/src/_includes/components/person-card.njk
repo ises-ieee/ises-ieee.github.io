@@ -1,6 +1,6 @@
 {# expects: person object #}
 <div class="person">
-  {% if person.photo %}<img src="{{ person.photo }}" alt="{{ person.name }}"/>{% endif %}
+  {% if person.photo %}<img src="{{site.basePath}}/{{ person.photo }}" alt="{{ person.name }}"/>{% endif %}
   <p>
     <strong>{{ person.name }}</strong><br/>
     {{ person.affiliation }}
