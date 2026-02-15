@@ -1,16 +1,17 @@
 (function () {
   // ✅ Update these paths to match your actual images folder + filenames
   const photos1 = [
-    "images/venue/Picture1.png",
-    "images/venue/Picture2.png",
-    "images/venue/Picture3.png",
+    "images/Venue/Picture1.png",
+    "images/Venue/Picture2.png",
+    "images/Venue/Picture3.png",
   ];
 
   const photos2 = [
-    "images/venue/Picture4.png",
-    "images/venue/Picture5.png",
-    "images/venue/Picture6.png",
+    "images/Venue/Picture4.png",
+    "images/Venue/Picture5.png",
+    "images/Venue/Picture6.png",
   ];
+
 
   function mountSlideshow(containerId, photos, intervalMs = 2500) {
     const el = document.getElementById(containerId);
