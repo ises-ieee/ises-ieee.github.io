@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% for m in layoutData.headMeta %}{{ m | safe }}{% endfor %}
+  <title>{{ pageTitle or (site.confName ~ " " ~ site.year) }}</title>
+  {% for l in layoutData.headLinks %}{{ l | safe }}{% endfor %}
+</head>
+<body class="{{ bodyClass | default('is-preload') }}">
+  {% include "partials/header.njk" %}
+  {{ content | safe }}
+  {% include "partials/footer.njk" %}
+  {% for s in layoutData.bodyScripts %}{{ s | safe }}{% endfor %}
+</body>
+</html>

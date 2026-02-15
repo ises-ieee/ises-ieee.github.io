@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+bodyClass: "homepage is-preload"
+---
+
+<div id="page-wrapper">
+
+<section class="wrapper style2" id="intro">
+<div class="container">
+<div class="abstract">
+
+<h1 class="inline-9f55950b12">Call for Contributions</h1><br/>
+
+<div class="inline-f6d8c6e93a">
+  {{ contributions.intro | replace("{{year}}", site.year) }}
+</div>
+
+<br/>
+
+<div class="inline-77c8140bfe">
+<table class="inline-bac81f6c8a">
+
+<thead>
+<tr class="inline-347dfdcf2d">
+  <th class="inline-05c8b84579">Contribution Type</th>
+  <th class="inline-05c8b84579">Important Dates</th>
+  <th class="inline-05c8b84579">Link</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for item in contributions.items %}
+<tr class="{% if loop.index0 % 2 == 0 %}inline-e21ba23400{% endif %}">
+
+  <td class="inline-05c8b84579"><strong>{{ item.title }}</strong></td>
+
+  <td class="inline-05c8b84579">
+    <ul class="inline-97662ab7f1">
+      {% for label, value in item.dates %}
+        <li>
+          <strong>{{ label }}:</strong>
+          {% if value and value != "" and value != "#" %}
+            {{ value }}
+          {% else %}
+            will be announced soon
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </td>
+
+  <td class="inline-05c8b84579">
+    {% if item.pageHref and item.pageHref != "" and item.pageHref != "#" %}
+      <a class="button-link" href="{{ item.pageHref }}">View Details</a>
+    {% else %}
+      <span class="button-link" style="opacity:.6; cursor:not-allowed;">View Details</span>
+    {% endif %}
+  </td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+</div>
+
+<br/>
+
+<div class="inline-f6d8c6e93a">
+  {{ contributions.outro | replace("{{year}}", site.year) }}
+</div>
+
+</div>
+</div>
+</section>
+
+</div>

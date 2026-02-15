@@ -1,0 +1,21 @@
+{
+  "headLinks": [
+    "<link href=\"https://cookie-consent.ieee.org/ieee-cookie-banner.css\" rel=\"stylesheet\" type=\"text/css\"/>",
+    "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">",
+    "<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>",
+    "<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap\" rel=\"stylesheet\">",
+    "<link href=\"/assets/css/fontawesome-all.min.css\" rel=\"stylesheet\"/>",
+    "<link href=\"/assets/css/app.css\" rel=\"stylesheet\"/>",
+    "<link href=\"/assets/css/app-inline.css\" rel=\"stylesheet\"/>"
+  ],
+  "headMeta": [
+    "<meta charset=\"utf-8\"/>",
+    "<meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/>"
+  ],
+  "bodyScripts": [
+    "<script src=\"https://cmp.osano.com/AzyzptTmRlqVd2LRf/868a3f52-fe86-4a0a-8d4c-7d633f6821c5/osano.js\"></script>",
+    "<script src=\"/assets/js/app.js\"></script>",
+    "<script src=\"/assets/js/venue-photos.js\"></script>"
+
+  ]
+}

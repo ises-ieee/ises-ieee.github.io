@@ -1,0 +1,74 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+bodyClass: "homepage is-preload"
+---
+
+<div id="page-wrapper">
+
+<section class="wrapper style2" id="intro">
+<div class="title">Submission Link</div>
+
+<div class="container">
+
+<p class="style1 inline-957527dc49">
+    Use of ORCID by authors is encouraged.
+</p>
+
+<p class="style1 inline-1adfbb28db">
+    Authors are requested to comply with the provisions of IEEE-CPS. For more details, visit: 
+    <a href="https://www.computer.org/conferences/cps" class="inline-a7988c6e19">
+        IEEE-CPS Provisions
+    </a>
+</p>
+
+<p class="style1 inline-1adfbb28db">
+    The link to submit the IEEE Electronic Copyright Form (eCF) will be sent separately through email. Submission of this eCF by one of the authors is mandatory by IEEE-CPS.
+</p>
+
+<p class="style1 inline-957527dc49">
+    The authors are responsible for avoiding plagiarism in their respective manuscript. Kindly review the IEEE policy for checking plagiarism: 
+    <a href="https://www.ieee.org/publications/rights/plagiarism/id-plagiarism" class="inline-a7988c6e19">
+        IEEE Plagiarism Policy
+    </a>.
+</p>
+
+
+<p class="style1 inline-339366ffe3">
+
+{% if links.cmtPortal and links.cmtPortal != "#" %}
+
+<a class="button-link"
+   href="{{ links.cmtPortal }}"
+   target="_blank"
+   rel="noopener">
+    Submission Link
+</a>
+
+{% else %}
+
+<a class="button-link"
+   href="#"
+   onclick="return false;"
+   aria-disabled="true">
+    Submission Link (Coming Soon)
+</a>
+
+{% endif %}
+
+</p>
+
+
+<p class="style1 inline-1adfbb28db">
+<i>
+The <a href="https://cmt3.research.microsoft.com/" class="inline-b64e6d9e05">
+Microsoft CMT service
+</a>
+will be used for managing the peer-reviewing process for this conference.
+</i>
+</p>
+
+</div>
+</section>
+
+</div>

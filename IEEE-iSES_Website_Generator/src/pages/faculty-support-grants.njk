@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+bodyClass: "homepage is-preload"
+---
+
+<div id="page-wrapper">
+
+<section class="wrapper style2" id="intro">
+<div class="title">Faculty Support Grants</div>
+
+<div class="container">
+
+<p class="inline-7d27179924">
+A limited number of partial-travel support grants are available for faculty attending IEEE iSES {{ site.year }}.
+</p>
+
+<p class="inline-7d27179924">
+Shortlisted faculty candidates will be notified and must have registered for the conference by paying the eligible registration fee.
+Participants with partial funding from their respective organizations will be given preference.
+</p>
+
+<p class="inline-7d27179924">
+Kindly indicate the specific type of support needed — Travel, Accommodation, OR both.
+</p>
+
+
+<p class="inline-7d27179924">
+
+For any queries, please email:
+
+{% if links.supportGrantEmail and links.supportGrantEmail != "" and links.supportGrantEmail != "#" %}
+
+<a href="mailto:{{ links.supportGrantEmail }}" class="inline-f479d19ba2">
+{{ links.supportGrantEmail }}
+</a>
+
+{% else %}
+
+<strong>Support grant contact email will be announced soon.</strong>
+
+{% endif %}
+
+</p>
+
+
+<p class="inline-e70cfdfd65">
+
+Please submit applications through
+
+{% if links.cmtPortal and links.cmtPortal != "" and links.cmtPortal != "#" %}
+
+<a href="{{ links.cmtPortal }}" target="_blank" class="inline-f479d19ba2">
+Microsoft CMT
+</a>
+
+{% else %}
+
+<strong>Microsoft CMT submission portal will be announced soon.</strong>
+
+{% endif %}
+
+<br><br>
+
+Faculty grant application form:
+
+{% if links.facultyGrantApplicationForm and links.facultyGrantApplicationForm != "" and links.facultyGrantApplicationForm != "#" %}
+
+<a href="{{ links.facultyGrantApplicationForm }}" class="inline-f479d19ba2">
+Download Application Form
+</a>
+
+{% else %}
+
+<strong>Application form will be announced soon.</strong>
+
+{% endif %}
+
+</p>
+
+
+<p class="inline-7d27179924">
+Welcome to IEEE iSES {{ site.year }}.
+</p>
+
+</div>
+</section>
+
+</div>

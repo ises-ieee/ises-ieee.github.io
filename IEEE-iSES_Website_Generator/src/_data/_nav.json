@@ -1,0 +1,179 @@
+[
+  {
+    "label": "Home",
+    "url": "/index.html"
+  },
+  {
+    "label": "About Us",
+    "children": [
+      {
+        "label": "Committees",
+        "children": [
+          {
+            "label": "Steering Committee",
+            "url": "/steering-committee.html"
+          },
+          {
+            "label": "Organizing Committee",
+            "url": "/organizing-committee.html"
+          },
+          {
+            "label": "Program Committee",
+            "url": "/program-committee.html"
+          }
+        ]
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "/privacy-policy.html"
+      },
+      {
+        "label": "Sponsorship",
+        "url": "/sponsorship.html"
+      },
+      {
+        "label": "Statements",
+        "url": "/statements.html"
+      }
+    ]
+  },
+  {
+    "label": "Program",
+    "children": [
+      {
+        "label": "Live Proceedings",
+        "url": "#"
+      },
+      {
+        "label": "Program Schedule",
+        "url": "/program-schedule.html"
+      },
+      {
+        "label": "Keynotes",
+        "url": "/keynotes.html"
+      },
+      {
+        "label": "Panel Discussions",
+        "url": "/panel-discussions.html"
+      },
+      {
+        "label": "Preconference Tutorials",
+        "url": "/preconference-tutorials.html"
+      },
+      {
+        "label": "Women in Engineering (WIE)",
+        "url": "/women-in-engineering.html"
+      },
+      {
+        "label": "Best Paper Awards",
+        "url": "/best-paper-award.html"
+      }
+    ]
+  },
+  {
+    "label": "Authors Information",
+    "children": [
+      {
+        "label": "Important Dates",
+        "url": "/important-dates.html"
+      },
+      {
+        "label": "Initial Manuscript Information",
+        "url": "/manuscript-information.html"
+      },
+      {
+        "label": "PDF Express Instructions",
+        "url": "/pdf-express.html"
+      },
+      {
+        "label": "Final Camera-ready Submission Instructions",
+        "url": "/camera-ready.html"
+      },
+      {
+        "label": "Final Camera-ready Submission Link",
+        "url": "/submission-link.html"
+      }
+    ]
+  },
+  {
+    "label": "Call for Contributions",
+    "children": [
+      {
+        "label": "Call for Papers",
+        "url": "/cfp.html"
+      },
+      {
+        "label": "Call for Special Sessions",
+        "url": "/cfp-ss.html"
+      },
+      {
+        "label": "Call for Papers RDS",
+        "url": "/cfp-rds.html"
+      },
+      {
+        "label": "Call for Papers SRF",
+        "url": "/cfp-srf.html"
+      },
+      {
+        "label": "Call for Pre-Conference Tutorials (PCT)",
+        "url": "/cfp-pct.html"
+      },
+      {
+        "label": "Call for Design Contest",
+        "url": "/call-for-dc.html"
+      }
+    ]
+  },
+  {
+    "label": "Registration",
+    "children": [
+      {
+        "label": "Register",
+        "url": "/register.html"
+      },
+      {
+        "label": "Student Support Grants",
+        "url": "/student-support-grants.html"
+      },
+      {
+        "label": "Faculty Support Grants",
+        "url": "/faculty-support-grants.html"
+      }
+    ]
+  },
+  {
+    "label": "Venue",
+    "children": [
+      {
+        "label": "Venue",
+        "url": "/venue.html"
+      },
+      {
+        "label": "Accommodation",
+        "url": "/accommodation.html"
+      },
+      {
+        "label": "Places to See",
+        "url": "/places-to-see.html"
+      }
+    ]
+  },
+  {
+    "label": "Links",
+    "children": [
+      {
+        "label": "LinkedIn Group",
+        "url": "https://www.linkedin.com/groups/12506886/"
+      }
+    ]
+  },
+  {
+    "label": "Contact",
+    "url": "/contact.html"
+  },
+  {
+    "label": "Past Conferences",
+    "url": "#",
+    "dynamic": "pastConferences"
+  }
+]

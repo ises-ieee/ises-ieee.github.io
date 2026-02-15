@@ -1,0 +1,212 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+bodyClass: "homepage is-preload"
+---
+
+<div id="page-wrapper">
+
+  <!-- HERO + QUICK LINKS -->
+  <section class="home-hero">
+    <div class="container home-hero__grid">
+
+      <!-- Main hero card -->
+      <div class="card home-hero__main">
+        <a class="image featured" href="#">
+          <img class="home-hero__banner" alt="" src="/images/IEEE-iSES-2025_Banner.jpg"/>
+        </a>
+
+        <!-- KEEP YOUR INTRO TEXT EXACTLY -->
+        <div class="home-hero__body">
+          <p class="style1">
+            The primary objective of IEEE International Symposium on Smart Electronic Systems
+            (IEEE – iSES) is to provide a platform for both hardware and software researchers to
+            interact under one umbrella for further development of smart electronic systems. Efficient and secure data
+            sensing, storage, and processing play pivotal roles in current information age. The state-of-the-art smart
+            electronic systems cater to the needs of efficient sensing, storage, and computing. At the same time,
+            efficient algorithms and software used for faster analysis and retrieval of desired information are becoming
+            increasingly important. Big data which are large, complex data sets, are now a part of the Internet world.
+            Storing and processing needs of the enormous amount of structured and unstructured data are getting
+            increasingly challenging. At the same time, Internet of Things (IoT) and cyber-physical systems (CPS) have
+            been evolving with simultaneous development of hardware and software and span across everyday consumer
+            electronics. The performance and efficiency of the present as well as the future generations of computing
+            and information processing systems are largely dependent upon advances in both hardware and software.
+          </p>
+
+          <p class="style1">
+            IEEE – iSES has been initiated as a sponsored meeting of Technical Committee on VLSI, IEEE-CS that endorses
+            a league of successful meetings including ASAP, ISVLSI, and ARITH, are now presented as “Sister Conferences”.
+          </p>
+
+          <div class="home-hero__cta">
+            <a class="btn btn-primary" href="https://cmt3.research.microsoft.com/IEEEiSeS2025" target="_blank" rel="noopener">
+              Submission Link
+            </a>
+            <a class="btn btn-ghost" href="/important-dates.html">Important Dates</a>
+            <a class="btn btn-ghost" href="/register.html">Registration</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links (from data) -->
+      <aside class="home-hero__side">
+        <div class="card">
+          <h2 class="card__title">Quick Links</h2>
+          <div class="quick-grid">
+            {% for q in home.quickLinks %}
+              <a class="quick-item" href="{{ q.href }}">{{ q.label }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+
+  <!-- LIVE UPDATES -->
+  <section class="home-updates">
+    <div class="container">
+
+      {# Latest as ticker #}
+      {% set tickerTitle = "Latest" %}
+      {% set tickerItems = feeds.announcements %}
+      {% set tickerTone  = "red" %}
+      {% include "partials/live-ticker.njk" %}
+
+      {# Important stable bar (this replaces old Important Information box to avoid duplication) #}
+      {% set barTitle = "Important" %}
+      {% set barItems = feeds.important %}
+      {% include "partials/important-bar.njk" %}
+
+    </div>
+  </section>
+
+
+  <!-- VENUE PHOTOS -->
+  <section class="home-section" id="event-photos">
+    <div class="container">
+      <div class="card">
+        <h2 class="section-title">Venue Photos</h2>
+
+        <div id="dual-slideshow-container" class="venue-slides">
+          <div id="slideshow-container-1" class="venue-slide"></div>
+          <div id="slideshow-container-2" class="venue-slide"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VENUE (video) -->
+  <section class="home-section" id="venue-video">
+    <div class="container">
+      <div class="card">
+        <h2 class="section-title">Venue</h2>
+        <p class="style1">
+          The venue for IEEE-iSES 2025 is in Jaipur, India. Below is a short video highlighting the key attractions of the venue.
+        </p>
+        <iframe
+          class="inline-e1b47cc9af"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          src="{{ embeds.youtubeEmbed_82ZVtbVpx4s }}"
+          title="YouTube video player">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- KEYNOTE SPEAKERS (from keynotes.json) -->
+  <section id="keynote-speakers" class="home-section">
+    <div class="container">
+      <h2 class="section-title center">Keynote Speakers</h2>
+
+      <div class="people-grid">
+        {% for p in keynotes %}
+          <a class="person-card" href="keynotes.html#{{ p.id }}">
+            <img alt="{{ p.name }}" src="{{ p.photo }}" class="inline-19a6131930"/>
+            <div class="person-card__meta">
+              <div class="person-card__name">{{ p.name }}</div>
+              {# affiliation is a single string in your JSON; split lines only in CSS/wrap #}
+              <div class="person-card__org">{{ p.affiliation }}</div>
+              {# optional: show title if you want; remove if not desired on homepage #}
+              {% if p.title and p.title != "" %}
+                <div class="person-card__role">{{ p.title }}</div>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SPONSORS (from sponsors.json) -->
+  <section class="home-section sponsor-section" id="sponsors">
+    <div class="container">
+      <h2 class="section-title center">Organizing Institute</h2>
+      <div class="sponsor-grid" aria-label="Organizing Institute">
+        {% for s in sponsors.organizing_institute %}
+          <div class="sponsor-item organizer">
+            <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.name }}">
+              <img class="sponsor-logo"
+                   alt="{{ s.name }}"
+                   src="{{ s.logo }}"
+                   data-placeholder="{{ s.placeholder or s.name }}"/>
+            </a>
+            <p class="caption"><strong>{{ s.name }}</strong></p>
+          </div>
+        {% endfor %}
+      </div>
+
+      <hr class="inline-67c0ddaeea"/>
+
+      <h2 class="section-title center">With Support From</h2>
+      <div class="sponsor-grid" aria-label="With support from">
+        {% for s in sponsors.support_from %}
+          <div class="sponsor-item support">
+            <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.name }}">
+              <img class="sponsor-logo"
+                   alt="{{ s.name }}"
+                   src="{{ s.logo }}"
+                   data-placeholder="{{ s.placeholder or s.name }}"/>
+            </a>
+            <p class="caption"><strong>{{ s.name }}</strong></p>
+          </div>
+        {% endfor %}
+      </div>
+
+      <hr class="inline-67c0ddaeea"/>
+
+      <h2 class="section-title center">Our Sponsors</h2>
+      <div class="sponsor-grid" aria-label="Our sponsors">
+        {% for s in sponsors.our_sponsors %}
+          <div class="sponsor-item">
+            <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.name }}">
+              <img class="sponsor-logo"
+                   alt="{{ s.name }}"
+                   src="{{ s.logo }}"
+                   data-placeholder="{{ s.placeholder or s.name }}"/>
+            </a>
+            <p class="caption"><strong>{{ s.name }}</strong></p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {# Keep your existing placeholder-logo script if you want, or move it to a global JS #}
+  </section>
+
+
+  <!-- CONTACT BAR -->
+  <div class="inline-c8ac807d71">
+    Contact Us:
+    &nbsp; ✉️ <a href="mailto:ieeeises2025@mnit.ac.in" class="inline-16e9e9993d">ieeeises2025@mnit.ac.in</a>
+  </div>
+
+</div>

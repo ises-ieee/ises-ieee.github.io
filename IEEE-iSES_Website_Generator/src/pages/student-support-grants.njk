@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+bodyClass: "homepage is-preload"
+---
+
+<div id="page-wrapper">
+<!-- Header -->
+
+<section class="wrapper style2" id="intro">
+<div class="title">Student Support Grants</div>
+
+<div class="container">
+
+<p class="inline-7d27179924">
+  A limited number of Student Travel Support Grants are available for those attending IEEE iSES {{ site.year }}.
+</p>
+
+<p class="inline-7d27179924">
+  Shortlisted candidates will be notified and must register for the conference by paying the eligible
+  registration fee (student fee for RDS/SRF, full fee for paper if presenting, delegate fee if co-author).
+  Participants with partial funding from their respective organizations will be given preference.
+</p>
+
+<p class="inline-7d27179924">
+  Please indicate the specific type of support you need: <strong>Travel, Accommodation, or Both</strong>.
+  This helps us extend support to a larger number of participants.
+</p>
+
+<p class="inline-7d27179924">
+  For any queries, please email
+  {% if links.supportGrantEmail and links.supportGrantEmail != "#" %}
+    <a href="mailto:{{ links.supportGrantEmail }}" class="inline-f479d19ba2">{{ links.supportGrantEmail }}</a>
+  {% else %}
+    <strong>(Support-grant email will be announced)</strong>
+  {% endif %}
+  with <strong>“Support Grant”</strong> in the subject.
+</p>
+
+<p class="inline-e70cfdfd65">
+  Please submit your applications ONLY through
+  {% if links.cmtPortal and links.cmtPortal != "#" %}
+    <a href="{{ links.cmtPortal }}" target="_blank" rel="noopener" class="inline-f479d19ba2">Microsoft CMT</a>.
+  {% else %}
+    <strong>Microsoft CMT (Submission link will be announced)</strong>.
+  {% endif %}
+  Fellowship application for student grant:
+  {% if links.supportGrantApplicationForm and links.supportGrantApplicationForm != "#" %}
+    <a href="{{ links.supportGrantApplicationForm }}" class="inline-f479d19ba2">Application</a>.
+  {% else %}
+    <strong>(Application form will be posted here)</strong>.
+  {% endif %}
+</p>
+
+<p class="inline-7d27179924">
+  Welcome to iSES {{ site.year }}.
+</p>
+
+</div>
+</section>
+
+<!-- Footer -->
+</div>

@@ -1,0 +1,27 @@
+{
+  "organizing_institute": [
+    {
+      "name": "National Institute of Technology, Goa",
+      "href": "https://www.nitgoa.ac.in/",
+      "logo": "/images/sponsors/NIT_Goa_circle_cut.png",
+      "placeholder": "NIT Goa"
+    }
+  ],
+  "support_from": [
+    {
+      "name": "Oriental University, Indore",
+      "href": "https://oui.edu.in/",
+      "logo": "/images/sponsors/oriental-university-indore.png",
+      "placeholder": "Oriental University, Indore"
+    },
+    {
+      "name": "IETE",
+      "href": "https://www.iete.org/iete-membership/",
+      "logo": "/images/sponsors/iete.png",
+      "placeholder": "IETE"
+    }
+  ],
+  "our_sponsors": [
+    
+  ]
+}

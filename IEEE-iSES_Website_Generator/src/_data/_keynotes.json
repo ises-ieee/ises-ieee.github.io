@@ -1,0 +1,66 @@
+[
+  {
+    "id": "gaurav",
+    "name": "Gaurav Jalan",
+    "affiliation": "AVP CCS HW Engineering, Marvell India Bengaluru",
+    "photo": "/images/KeynoteSpeakers/GauravJalan.png",
+    "title": "Title awaited",
+    "bio_html": "Gaurav Jalan has more than two decades of extensive industry experience with successful stints\n                        as Executive, Manager, Individual contributor & Entrepreneur. With the belief that 'people' are\n                        the biggest asset, he enjoy working with individuals & teams to channelize the energy in\n                        reaching their true potential. 'Collaboration' is another aspect that I strongly advocate to\n                        nurture 'growth mindset' - Together, we can! He likes pursuing challenges head-on & leads the\n                        change, whether Technical or Cultural. He has built & led high-performing teams for Product\n                        Engineering solutions successfully. Delivered programs in a variety of domains covering Custom\n                        silicon, DPU, AI, Servers, Automotive, Networking, Wearables, Mobile, Storage, Connectivity &\n                        Graphics. Lead multiple SoCs, ASICs & Test chips with first silicon success. Expert in\n                        development & packaging of IP/VIP as an offering. Actively participates in early customer\n                        engagement, tailoring custom solutions, specification to end product development with excellence\n                        in execution. Proficient in collaborating with multi-site & multi-function teams globally"
+  },
+  {
+    "id": "rajesh",
+    "name": "Rajesh Kumar Tiwari",
+    "affiliation": "Director of Engineering Qualcomm India",
+    "photo": "/images/KeynoteSpeakers/RajeshTiwari.png",
+    "title": "Multiphase in system BIST for automotive design",
+    "bio_html": "Rajesh Kumar Tiwari is the Director of Engineering at Qualcomm India Private Ltd, Bangalore,\n                        bringing over 21 years of experience in the VLSI industry, including more than 11 years at\n                        Qualcomm. He leads the development and deployment of DFT Scan Architecture and InSystem BIST\n                        solutions across Mobile, Compute, and Automotive products. Before joining Qualcomm, Rajesh spent\n                        a decade at Texas Instruments, where he architected DFT strategies for highly complex SoC\n                        designs. He holds a Master\u2019s degree in VLSI from MNIT Jaipur, India, and is a recognized\n                        innovator with multiple patents. Rajesh is also an active contributor to the IEEE, particularly\n                        in the domain of Semiconductor Test and DFT."
+  },
+  {
+    "id": "nidhi",
+    "name": "Nidhi Chaturvedi",
+    "affiliation": "Chief Scientist at CSIR-CEERI, Pilani, Semiconductor Sensors and Microsystem Group",
+    "photo": "/images/KeynoteSpeakers/NidhiChaturvedi.png",
+    "title": "Wide and Ultra wide bandgap semiconductors for Electric Vehicle",
+    "bio_html": "Dr.-Ing. Nidhi Chaturvedi is Sr. Principal Scientist at CSIR-Central Electronics Engineering\n                        Research Institute, Pilani, Rajasthan, India. She is also Professor at Academy of Scientific and\n                        Innovative Research (AcSIR), Ghaziabad, Uttar Pradesh, India. As an additional role, she had\n                        been the Technology and IP In-charge of CSIR-CEERI for about 5 years."
+  },
+  {
+    "id": "nirupam",
+    "name": "Nirupam SD",
+    "affiliation": "Chief Technology Officer (CTO) - Data Fusion, Internet of Things (IoT) and Artificial\n                        Intelligence, Singapore",
+    "photo": "/images/KeynoteSpeakers/NirupamSD.png",
+    "title": "Title awaited-",
+    "bio_html": "Engineering leader with 18+ years of global executive experience in Internet of Things (IoT),\n                        Cloud computing, M2M, Big Data, Analytics, Visual Computing, Automotive Telematics, Enterprise\n                        IT, Smartcities. Focus on Strategy, Innovation, New business development/ Expansion, Commercial\n                        strategies, Presales, Thought leadership, Joint ventures and Public private partnership (PPP).\n                        Built Startup ventures, successful IoT operation, IoT platforms, IoT\n                        products from scratch. Leadership roles in global IoT, Cloud, IT/ITES, ICT industries and R&D\n                        centers. Serve as chief ICT architect and chief instrumentation expert for ICT driven future\n                        (smart) cities and on not-for-profit boards."
+  },
+  {
+    "id": "mani",
+    "name": "Mani Madhukar",
+    "affiliation": "IBM Research India",
+    "photo": "/images/KeynoteSpeakers/ManiMadhukar.png",
+    "title": "Title awaited-",
+    "bio_html": "Practitioner and leader with 18+ years of experience in Edtech, proven record of driving\n                        innovation and disruption in the Education sector through technology. I am part of the\n                        Innovation Centre for Education team at IBM India. Passionate about learning and sharing\n                        knowledge, I have deep expertise in designing, implementing, and scaling national-level skills\n                        building, educational, and training programs for the future workforce."
+  },
+  {
+    "id": "rajneesh",
+    "name": "Rajneesh Rathi",
+    "affiliation": "AVP MBE Software, Marvell Bengaluru",
+    "photo": "/images/KeynoteSpeakers/RajneeshRathi.png",
+    "title": "Title awaited-",
+    "bio_html": "Leader with expertise in 5GNR, LTE Access network, Cloud Hardware Security Module & Fibre\n                        Channel. Good understanding of software and hardware aspects of Wireless, Security & Storage\n                        products. Broad range of architecture and design expertise that covers embedded software,\n                        application software, reliability, stability & performance aspects of a product in addition to\n                        functional aspects."
+  },
+  {
+    "id": "rohit",
+    "name": "Rohit Gupta",
+    "affiliation": "Principal Engineering Manager, Qualcomm, India",
+    "photo": "/images/KeynoteSpeakers/RohitGupta_Pic.jpg",
+    "title": "Sustainable Architectures and Specialized Chips for Generative AI Workloads.",
+    "bio_html": "Rohit Gupta is a seasoned semiconductor architect and technology leader whose work spans the\n                        entire spectrum of IP and SoC architecture\u2014from concept to tape-out\u2014with a proven record of\n                        first-silicon success. As Principal Engineering Manager at Qualcomm, Rohit leads a\n                        high-performing team developing low-power management controllers and high-speed hardware\n                        acceleration IPs that power Snapdragon platforms across mobile, automotive, compute, IoT, and\n                        XR/VR segments."
+  },
+  {
+    "id": "deepak",
+    "name": "Deepak Agrawal",
+    "affiliation": "Vice President - SoC Engineering Hrdwyr, Bengaluru",
+    "photo": "/images/KeynoteSpeakers/DeepakAgrawal.png",
+    "title": "Title awaited-",
+    "bio_html": "A driven leader with a demonstrated history of delivering successful products. Developed SoCs\n                        for Wireless, Networking, and Storage markets with end-to-end ownership from concept to\n                        qualification phase.\n\n\n                        <br/><br/>Built, managed, and energized high-performance teams with a culture of innovation. <br/>\n\n                        Strong project management skills, including risk identification, mitigation, and schedule\n                        forecasting.<br/>\n\n                        Passionate change agent striving for enhanced quality, efficiency, and competence in the\n                        organization.<br/>\n\n                        Highly technical professional with business acumen. Nurtured and bolstered business\n                        relationships with customers, resulting in revenue growth.<br/>"
+  }
+]

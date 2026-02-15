@@ -1,0 +1,19 @@
+{
+  "enabled": false,
+  "schedule": [
+    {
+      "id": "jatin-chintan",
+      "title": "DFT implementation at RTL stage: Methodology to enhance SoC Testability and reduce Time-to-Market",
+      "speakers": ["jatin-chakravarti", "chintan-panchal"],
+      "date": "2026-12-13",
+      "time": "Morning"
+    },
+    {
+      "id": "subir-kusum",
+      "title": "Model-Based Hardware-Software Co-Synthesis of Embedded Systems",
+      "speakers": ["subir-kumar-roy", "kusum-lata"],
+      "date": "2026-12-13",
+      "time": "Afternoon"
+    }
+  ]
+}

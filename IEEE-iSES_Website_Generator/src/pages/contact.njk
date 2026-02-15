@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+bodyClass: "homepage is-preload"
+---
+
+<div id="page-wrapper">
+
+<section class="wrapper style2" id="intro">
+<div class="title">Contact</div>
+
+<div class="container">
+
+<p class="style1 inline-cdd8ca0640">
+
+Please feel free to contact us at:
+
+{% if links.supportGrantEmail and links.supportGrantEmail != "" and links.supportGrantEmail != "#" %}
+
+<a href="mailto:{{ links.supportGrantEmail }}" class="inline-f479d19ba2">
+{{ links.supportGrantEmail }}
+</a>
+
+{% else %}
+
+<strong>Contact email will be announced soon.</strong>
+
+{% endif %}
+
+</p>
+
+</div>
+</section>
+
+</div>

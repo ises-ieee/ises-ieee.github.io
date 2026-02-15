@@ -1,0 +1,19 @@
+{
+  "cmtPortal": "https://cmt3.research.microsoft.com/",
+  "pdfExpress": "https://ieee-pdf-express.org",
+  "pdfExpressConferenceId": "XXXXXX",
+  "supportGrantEmail": "",
+  "supportGrantApplicationForm": "",
+  "facultyGrantApplicationForm": "",
+  "templates": {
+    "ieeeManuscript": "https://www.ieee.org/conferences/publishing/templates.html"
+  },
+  "social": {
+    "twitter": "https://twitter.com",
+    "linkedin": "https://www.linkedin.com",
+    "youtube": "https://www.youtube.com"
+  },
+  "footer": {
+    "maintainedBy": "IEEE-iSES Web Team"
+  }
+}

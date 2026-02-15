@@ -1,0 +1,10 @@
+{
+  "quickLinks": [
+    { "label": "Call for Contributions", "href": "/call-for-contributions.html" },
+    { "label": "Important Dates", "href": "/important-dates.html" },
+    { "label": "Program Schedule", "href": "/program-schedule.html" },
+    { "label": "Registration", "href": "/register.html" },
+    { "label": "Camera Ready", "href": "/camera-ready.html" },
+    { "label": "Venue", "href": "/venue.html" }
+  ]
+}

@@ -1,0 +1,158 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+bodyClass: "homepage is-preload"
+---
+
+
+<div id="page-wrapper">
+<!-- Header -->
+
+<!-- Design Contest (simple format) -->
+<!-- Design Contest (simple format) -->
+<section class="wrapper style2" id="intro">
+<div class="container">
+<style>
+      /* Keep it simple and readable, like RDS page */
+      #intro .simple h1 {font-size: 35px;}
+      #intro .simple h2, 
+      #intro .simple h3 { text-align: left; margin-bottom: 0.6rem; font-size: larger; }
+      #intro .simple p, 
+      #intro .simple ul,
+      #intro .simple ol { text-align: left; line-height: 1.6; }
+      #intro .simple ul { list-style: disc outside; margin-left: 1.25rem; }
+      #intro .simple li { margin: 0.25rem 0; }
+      #intro .simple .pdf { margin: 0.25rem 0 1rem; text-align: center; font-size: larger; }
+      #intro .simple .pdf a { color: red; }
+      #intro .simple .pdf img { width: 18px; height: 18px; position: relative; top: 3px; margin-right: 6px; }
+      #intro .simple { color: black; }
+    </style>
+<div class="simple">
+<h1>IEEE-iSES 2025 Design Contest</h1>
+<h1 class="inline-438c9af8b6">High-Speed Hardware Accelerator for Cryptographic functions</h1>
+<br/>
+<!-- PDF link -->
+<p class="pdf">
+    Call for Design Contest PDF:
+    <a href="{{ pdfs.design_contest_cfp }}" target="_blank">
+<img alt="PDF icon" src="/images/pdf_icon.png"/>Download PDF
+    </a>
+</p>
+<!-- Scope -->
+<h3>Scope</h3>
+<p>
+    Secure communication is necessary to protect data privacy and prevent unauthorized access,
+    theft, and modification of sensitive information by using methods like encryption,
+    authentication, and integrity checks. It safeguards personal details, business secrets, and,
+    ensuring confidentiality, accuracy, and trustworthiness in online interactions and building
+    confidence in digital systems against growing cyber threats.
+  </p>
+<p>
+    We use different kind of algorithms for confidentiality/integrity/authentication such as Block
+    cipher (e.g 3DES, DES, AES), Stream cipher (RC4), public Key (RSA, ECC) and
+    MACs/HMAC based on MD5, SHA etc
+  </p>
+<p>
+    Hardware implementations of cryptographic algorithms are needed to provide high speed,
+    increased security, and improved power efficiency compared to software implementations.
+  </p>
+<p>
+    Example : SSL, IPsec protocol provides security, integrity and authentication at transport and
+    Network layer
+  </p>
+<ul>
+<li>AES/DES/3DES is typically used securing data traffic, RSA (public key cryptography)
+        is used for sharing symmetric key to other party and HMAC is used for data integrity.</li>
+</ul>
+<!-- Task -->
+<h3>Task:</h3>
+<p>
+    Design and implement a hardware accelerator for the following cryptographic algorithm
+    which optimizes for high throughput, low latency, and energy efficiency. The solution should
+    be suitable for integration into an ASIC or FPGA.
+  </p>
+<ul>
+<li>AES-128 bit</li>
+<li>RSA-2048 bit</li>
+<li>HMAC based on MD5 or SHA-1</li>
+</ul>
+<!-- Requirements -->
+<h3>Requirements</h3>
+<ul>
+<li><strong>Supported Algorithm:</strong> AES-128, RSA-2048, HMAC (MD5).</li>
+<li><strong>High-Speed Architecture:</strong>
+<ul>
+<li>Propose and implement architectural optimizations (e.g. High speed adder,
+            multipliers, pipelining, parallelism, resource sharing).</li>
+<li>Support for high data rates &amp; Low latency</li>
+</ul>
+</li>
+<li><strong>Power and Area Efficiency:</strong>
+<ul>
+<li>Analyze and optimize power consumption and silicon area.</li>
+</ul>
+</li>
+<li><strong>Verification:</strong>
+<ul>
+<li>Functional verification using test vectors for encryption &amp; decryption</li>
+<li>Performance benchmarking (throughput, latency, power).</li>
+</ul>
+</li>
+<li><strong>Deliverables:</strong>
+<ul>
+<li>RTL design (Verilog/VHDL/SystemVerilog)</li>
+<li>Target platform – FPGA (Altera or Xilinx) or ASIC (Synopsys/Cadence etc)</li>
+<li>Technical report detailing architecture, optimizations, results, and trade-offs.</li>
+<li>Live demo or simulation or FPGA prototype.</li>
+</ul>
+</li>
+</ul>
+<!-- Evaluation -->
+<h3>Evaluation Criteria</h3>
+<ul>
+<li>Correctness – Implementation should adhere to standard protocol. Show few working
+        standard vectors in the demo/simulation</li>
+<li>Throughput - Throughput refers how much data can be processed in a sec (for e.g a
+        throughput of 1Gbps means 1Giga bit of data can be processed in a second)</li>
+<li>Latency – (for e.g How many cycles consumed in result generation for AES operation)</li>
+<li>Max frequency - List max frequency of operation</li>
+<li>Power and Area Efficiency</li>
+<li>Design Innovation</li>
+<li>Quality of Documentation and Presentation</li>
+</ul>
+<!-- Organizers -->
+<h3>Session Organizers</h3>
+<ul>
+<li>Surendra Tadi, Qualcomm India Pvt Ltd, <a href="mailto:surendratadi@gmail.com">surendratadi@gmail.com</a></li>
+<li>Mayank Parasrampuria, Google India Pvt Ltd, <a href="mailto:mayankp406@gmail.com">mayankp406@gmail.com</a></li>
+</ul>
+<!-- Topics -->
+<h3>Topics/ Keywords</h3>
+<ul>
+<li>Hardware Assisted Security, Security by Design</li>
+</ul>
+<!-- Dates -->
+<h3>Important Dates:</h3>
+<p>
+    Launch: 14 October, 2025<br/>
+    Last date to receive application: 30 October, 2025<br/>
+    Orientation session: 3 November, 2025,<br/>
+    Last day of implemented idea submission: 30 November, 2025
+  </p>
+<!-- Submission -->
+<p>
+    Submission accepted through Microosft CMT:<br/>
+<a href="{{ links.cmtPortal }}" target="_blank">{{ links.cmtPortal }}</a>
+</p>
+<p>
+    The applicant has to submit the application under Design Contest- HW accelerators for
+    Cryptographic functions.
+  </p>
+<p>
+<a href="{{ links.cmtPortal }}" target="_blank">{{ links.cmtPortal }}</a>
+</p>
+</div>
+</div></section>
+<!-- Footer -->
+
+</div>

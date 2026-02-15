@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+---
+
+<div id="page-wrapper">
+<section class="wrapper style2" id="intro">
+  <div class="title">Keynotes</div>
+  <div class="container">
+    {% for sp in keynotes %}
+      <div class="card keynote">
+        <div class="card-body">
+          <div class="keynote-grid">
+            <div>
+              {% if sp.photo %}<img class="keynote-photo" src="{{ sp.photo }}" alt="{{ sp.name }}">{% endif %}
+            </div>
+            <div class="stack">
+              <div>
+                <div class="keynote-name">{{ sp.name }}</div>
+                <div class="muted">{{ sp.affiliation }}</div>
+              </div>
+              <div>
+                <div class="section-label">Title</div>
+                <div class="muted">{{ sp.title }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="section-label">Speaker Biography</div>
+          <div class="prose">{{ sp.bio_html }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+</div>

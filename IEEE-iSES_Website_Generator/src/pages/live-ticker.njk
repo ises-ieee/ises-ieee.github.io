@@ -1,0 +1,21 @@
+{% set toneClass = tickerTone | default("red") %}
+{% set title = tickerTitle | default("Updates") %}
+{% set items = tickerItems | default([]) %}
+
+<div class="live-ticker {{ toneClass }}" role="region" aria-label="{{ title }} live updates">
+  <div class="live-ticker__label">{{ title }}</div>
+
+  <div class="live-ticker__viewport">
+    <div class="live-ticker__track">
+      {% for it in items %}
+        <span class="live-ticker__item">
+          {% if it.tag %}
+            <span class="live-ticker__tag">{{ it.tag }}</span>
+          {% endif %}
+          <a href="{{ it.url }}">{{ it.date }}: {{ it.text }}</a>
+          <span class="live-ticker__sep">•</span>
+        </span>
+      {% endfor %}
+    </div>
+  </div>
+</div>

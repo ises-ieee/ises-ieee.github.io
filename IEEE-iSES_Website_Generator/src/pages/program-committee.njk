@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+---
+
+<div id="page-wrapper">
+<section class="wrapper style2" id="intro">
+  <div class="title">Program Committee</div>
+  <div class="container">
+    {% for section in committees.program %}
+      <div class="category">
+        <h2>{{ section.title }}</h2>
+        <div class="persons">
+          {% for pid in section.members %}
+            {% set person = people[pid] %}
+            {% include "components/person-card.njk" %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+</div>

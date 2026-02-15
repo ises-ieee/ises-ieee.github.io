@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© {{ site.confName }} {{ site.copyrightYears }}</div>
+    <div>{{ links.footer.maintainedBy or "IEEE-iSES Web Team" }}</div>
+  
+  <div class="footer-right">
+    <div class="footer-social" aria-label="Social links">
+      {% if links.social.twitter %}<a href="{{ links.social.twitter }}" aria-label="Twitter">Twitter</a>{% endif %}
+      {% if links.social.linkedin %}<a href="{{ links.social.linkedin }}" aria-label="LinkedIn">LinkedIn</a>{% endif %}
+      {% if links.social.youtube %}<a href="{{ links.social.youtube }}" aria-label="YouTube">YouTube</a>{% endif %}
+    </div>
+    <div>{{ links.footer.maintainedBy or "IEEE-iSES Web Team" }}</div>
+  </div>
+</div>
+</footer>

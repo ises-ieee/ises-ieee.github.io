@@ -1,0 +1,49 @@
+{
+  "intro": "The IEEE International Symposium on Smart Electronic Systems (IEEE iSES {{year}}) welcomes a variety of contributions from the research community. Use the links below to access the details and submission guidelines for each category.",
+  "outro": "We encourage your participation and look forward to your contributions to IEEE-iSES {{year}}.",
+  "items": [
+    {
+      "title": "Call for Papers",
+      "pageHref": "cfp.html",
+      "dates": {
+        "Submission": "June 06, 2026",
+        "Acceptance": "August 15, 2026",
+        "Final Submission": "September 15, 2026"
+      }
+    },
+    {
+      "title": "Call for Special Sessions",
+      "pageHref": "",
+      "dates": {
+        "Paper Submission": "",
+        "Acceptance": "",
+        "Final Submission": ""
+      }
+    },
+    {
+      "title": "Call for Research Demo Session (RDS)",
+      "pageHref": "",
+      "dates": {
+        "Submission": "",
+        "Acceptance": "",
+        "Final Submission": ""
+      }
+    },
+    {
+      "title": "Call for Student Research Forum (SRF)",
+      "pageHref": "",
+      "dates": {
+        "Submission": "",
+        "Acceptance": "",
+        "Final Submission": ""
+      }
+    },
+    {
+      "title": "Call for Pre-Conference Tutorials (PCT)",
+      "pageHref": "",
+      "dates": {
+        "Tutorial Dates": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{% set title = barTitle | default("Important") %}
+{% set items = barItems | default([]) %}
+
+<section class="important-bar" aria-label="{{ title }} updates">
+  <div class="important-bar__label">{{ title }}</div>
+
+  <div class="important-bar__items">
+    {% for it in items %}
+      <a class="important-pill" href="{{ it.url }}">
+        {% if it.tag %}<span class="important-pill__tag">{{ it.tag }}</span>{% endif %}
+        <span class="important-pill__text">{{ it.date }}: {{ it.text }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>

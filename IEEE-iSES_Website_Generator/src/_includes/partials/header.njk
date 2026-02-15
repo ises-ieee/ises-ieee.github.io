@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html" aria-label="Home">
+      <img src="/images/ieee-ises_logo_2026.png" alt="IEEE-iSES logo">
+      <div class="brand-title">
+        <div class="name">{{ site.confName }} {{ site.year }}</div>
+        <div class="tag">{{ site.tagline }}</div>
+      </div>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    {# Recursive nav renderer #}
+    {% macro render_items(items) %}
+      {% for item in items %}
+        <li>
+          <a href="{{ item.url or '#' }}">{{ item.label }}</a>
+
+          {# Dynamic submenu: Past Conferences #}
+          {% if item.dynamic == "pastConferences" %}
+            <ul>
+              {% for conf in pastConferences.items %}
+                <li><a href="{{ conf.url }}">{{ conf.name }}</a></li>
+              {% endfor %}
+            </ul>
+          {% elif item.children and item.children.length %}
+            <ul>
+              {{ render_items(item.children) }}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endmacro %}
+
+    <nav class="site-nav" data-nav data-open="false" aria-label="Primary">
+      <ul>
+        {{ render_items(nav) }}
+      </ul>
+    </nav>
+  </div>
+</header>

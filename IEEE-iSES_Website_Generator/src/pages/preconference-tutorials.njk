@@ -1,0 +1,150 @@
+---
+layout: layouts/base.njk
+pageTitle: "{{ site.shortName }}"
+bodyClass: "homepage is-preload"
+---
+
+<div id="page-wrapper">
+
+<section class="wrapper style2" id="intro">
+
+<div class="title">Preconference Tutorials</div>
+
+<div class="container">
+
+{% if tutorials.enabled and tutorials.schedule.length %}
+
+<h2 class="inline-cdd8ca0640">Tutorial Schedule</h2>
+<br>
+
+<table>
+<thead>
+<tr>
+<th>Speaker and Designation</th>
+<th>Title</th>
+<th>Date</th>
+<th>Time</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for tutorial in tutorials.schedule %}
+
+<tr>
+
+<td>
+
+{% for speakerId in tutorial.speakers %}
+
+{% set speaker = people[speakerId] %}
+
+{{ speaker.name }}
+{% if speaker.affiliation %} ({{ speaker.affiliation }}){% endif %}
+
+{% if not loop.last %}<br>{% endif %}
+
+{% endfor %}
+
+</td>
+
+<td>
+<a href="#{{ tutorial.id }}" class="inline-a7988c6e19">
+{{ tutorial.title }}
+</a>
+</td>
+
+<td>{{ tutorial.date }}</td>
+
+<td>{{ tutorial.time }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="container">
+
+{% for tutorial in tutorials.schedule %}
+
+<div class="tutorial">
+
+<h2 id="{{ tutorial.id }}">
+{{ tutorial.title }}
+</h2>
+
+<br>
+
+<div class="speakers">
+
+{% for speakerId in tutorial.speakers %}
+
+{% set speaker = people[speakerId] %}
+
+<div class="speaker">
+
+{% if speaker.photo %}
+<img
+class="speaker-img"
+src="{{ speaker.photo }}"
+alt="{{ speaker.name }}">
+{% endif %}
+
+<h3>{{ speaker.name }}</h3>
+
+{% if speaker.affiliation %}
+<p>{{ speaker.affiliation }}</p>
+{% endif %}
+
+{% if speaker.url %}
+<p>
+<a href="{{ speaker.url }}" target="_blank">
+View Profile
+</a>
+</p>
+{% endif %}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% if tutorial.abstract %}
+<div class="bio">
+
+<h4>Abstract</h4>
+
+<p>
+{{ tutorial.abstract }}
+</p>
+
+</div>
+{% endif %}
+
+</div>
+
+<hr>
+
+{% endfor %}
+
+{% else %}
+
+<h2>Will be announced soon.</h2>
+
+{% endif %}
+
+</div>
+
+</section>
+
+<button id="goTopBtn" onclick="scrollToTop()" title="Go to Top">
+Go to Top
+</button>
+
+</div>

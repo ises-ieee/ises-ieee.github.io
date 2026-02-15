@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+pageTitle: "IEEE-iSES"
+---
+
+<div id="page-wrapper">
+<section class="wrapper style2" id="intro">
+  <div class="title">Important Dates</div>
+  <div class="container">
+    <div class="grid-3">
+      {% for d in importantDates %}
+        <div class="card"><div class="card-body">
+          <div class="section-label">{{ d.label }}</div>
+          <div class="muted">{{ d.date }}</div>
+        </div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+</div>
