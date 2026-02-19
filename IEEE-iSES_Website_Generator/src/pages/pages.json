@@ -1,1 +1,0 @@
-{  "permalink": "{% if page.fileSlug %}/{{ page.fileSlug }}.html{% else %}/index.html{% endif %}" }
